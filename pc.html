@@ -107,6 +107,65 @@
                     <span>SIZE</span>
                     <span class="size-guide-tip popup-show-btn" data-popup="size-guide-popup">사이즈 가이드</span>
                 </p>
+                <div class="size-select-wrap">
+                    <div class="custom-select">
+                        <button class="select-btn" type="button">
+                            <span class="select-text">056</span>
+                            <span class="select-arrow">
+                                <img src="https://image.prospecs.com/front/images/renewal/icon_down_gray.svg" alt="">
+                            </span>
+                        </button>
+                        <ul class="select-dropdown">
+                            <li data-index="0" class="">옵션 1 : 선수명 선택</li>
+                            <li data-index="1" class="">2025 LG트윈스 어센틱 홈 유니폼_이지강</li>
+                            <li data-index="2" class="">2025 LG트윈스 어센틱 홈 유니폼_이주헌</li>
+                            <li data-index="3" class="" disabled>2025 LG트윈스 어센틱 홈 유니폼_장현식</li>
+                            <li data-index="4" class="">2025 LG트윈스 어센틱 홈 유니폼_최원영</li>
+                            <li data-index="5" class="">2025 LG트윈스 어센틱 홈 유니폼_치리노스</li>
+                            <li data-index="6" class="">2025 LG트윈스 어센틱 홈 유니폼_홍창기</li>
+                            <li data-index="7" class="">2025 LG트윈스 어센틱 홈 유니폼_오지환</li>
+                            <li data-index="8" class="">2025 LG트윈스 어센틱 홈 유니폼_김강률</li>
+                            <li data-index="9" class="">2025 LG트윈스 어센틱 홈 유니폼_김영우</li>
+                            <li data-index="10" class="">2025 LG트윈스 어센틱 홈 유니폼_김유영</li>
+                            <li data-index="11" class="">2025 LG트윈스 어센틱 홈 유니폼_김진성</li>
+                            <li data-index="12" class="">2025 LG트윈스 어센틱 홈 유니폼_김현수</li>
+                            <li data-index="13" class="">2025 LG트윈스 어센틱 홈 유니폼_문보경</li>
+                            <li data-index="14" class="">2025 LG트윈스 어센틱 홈 유니폼_문성주</li>
+                            <li data-index="15" class="">2025 LG트윈스 어센틱 홈 유니폼_문정빈</li>
+                            <li data-index="16" class="">2025 LG트윈스 어센틱 홈 유니폼_박동원</li>
+                            <li data-index="17" class="">2025 LG트윈스 어센틱 홈 유니폼_박명근</li>
+                            <li data-index="18" class="">2025 LG트윈스 어센틱 홈 유니폼_박해민</li>
+                            <li data-index="19" class="">2025 LG트윈스 어센틱 홈 유니폼_백승현</li>
+                            <li data-index="20" class="">2025 LG트윈스 어센틱 홈 유니폼_손주영</li>
+                            <li data-index="21" class="">2025 LG트윈스 어센틱 홈 유니폼_송찬의</li>
+                            <li data-index="22" class="">2025 LG트윈스 어센틱 홈 유니폼_신민재</li>
+                            <li data-index="23" class="">2025 LG트윈스 어센틱 홈 유니폼_오스틴</li>
+                            <li data-index="24" class="">2025 LG트윈스 어센틱 홈 유니폼_구본혁</li>
+                            <li data-index="25" class="selected">2025 LG트윈스 어센틱 홈 유니폼_우강훈</li>
+                            <li data-index="26" class="">2025 LG트윈스 어센틱 홈 유니폼_이우찬</li>
+                            <li data-index="27">2025 LG트윈스 어센틱 홈 유니폼_임찬규</li>
+                        </ul>
+                    </div>
+                    <div class="custom-select">
+                        <button class="select-btn" type="button">
+                            <span class="select-text">옵션 2 : 사이즈 선택</span>
+                            <span class="select-arrow">
+                                <img src="https://image.prospecs.com/front/images/renewal/icon_down_gray.svg" alt="">
+                            </span>
+                        </button>
+                        <ul class="select-dropdown">
+                            <li data-index="0" class="selected highlighted">옵션 2 : 사이즈 선택</li>
+                            <li data-index="1" class="">085</li>
+                            <li data-index="2" class="">090</li>
+                            <li data-index="3" class="">095</li>
+                            <li data-index="4" class="">100</li>
+                            <li data-index="5" class="">105</li>
+                            <li data-index="6" class="">110</li>
+                            <li data-index="7" class="">115</li>
+                            <li data-index="8" class="last">120</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="size-btn-wrap">
                     <button>230</button>
                     <button>235</button>
@@ -1582,7 +1641,7 @@
             },
             initComponents: function () {
                 // 마우스 휠(상하) 동작을 .horizontal-scroll에서 좌우 스크롤로 변경
-                $('.horizontal-scroll').on('wheel', function (e) {
+                $('.prd-detail-page .horizontal-scroll').on('wheel', function (e) {
                     if (e.originalEvent.deltaY === 0) return;
 
                     // 현재 스크롤 위치와 최대/최소값 계산
@@ -1607,7 +1666,7 @@
                     container.scrollLeft = newScrollLeft;
                 });
 
-                $('.custom-select').each(function () {
+                $('.prd-detail-page .custom-select').each(function () {
                     var $wrapper = $(this);
                     var $select = $wrapper.find('.select-input');
                     var $btn = $wrapper.find('.select-btn');
@@ -1637,6 +1696,9 @@
                     // 버튼 클릭 시 드롭다운 토글
                     $btn.click(function (e) {
                         e.stopPropagation();
+                        // 다른 모든 custom-select 닫기
+                        $('.prd-detail-page .custom-select').not($wrapper).removeClass('active');
+                        // 현재 클릭한 것만 토글
                         $wrapper.toggleClass('active');
                     });
 
@@ -1677,7 +1739,7 @@
 
 
                 // .sec-title 클릭 시 해당 섹션의 table 토글
-                $('.toggle-sec .sec-title').click(function () {
+                $('.prd-detail-page .toggle-sec .sec-title').click(function () {
                     var $section = $(this).closest('.toggle-sec');
                     var $table = $section.find('.toggle-content');
                     $table.slideToggle(350);

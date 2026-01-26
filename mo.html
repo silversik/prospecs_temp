@@ -642,6 +642,50 @@
                     </ul>
                     <div class="tab-content">
                         <div>
+                            <div class="size-select-wrap">
+                                <select class="custom-select">
+                                    <option>옵션 1 : 선수명 선택</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_이지강</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_이주헌</option>
+                                    <option disabled>2025 LG트윈스 어센틱 홈 유니폼_장현식</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_최원영</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_치리노스</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_홍창기</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_오지환</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_김강률</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_김영우</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_김유영</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_김진성</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_김현수</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_문보경</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_문성주</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_문정빈</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_박동원</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_박명근</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_박해민</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_백승현</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_손주영</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_송찬의</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_신민재</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_오스틴</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_구본혁</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_우강훈</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_이우찬</option>
+                                    <option>2025 LG트윈스 어센틱 홈 유니폼_임찬규</option>
+                                </select>
+                                <hr />
+                                <select class="custom-select">
+                                    <option>옵션 2 : 사이즈 선택</option>
+                                    <option>085</option>
+                                    <option>090</option>
+                                    <option>095</option>
+                                    <option>100</option>
+                                    <option>105</option>
+                                    <option>110</option>
+                                    <option>115</option>
+                                    <option>120</option>
+                                </select>
+                            </div>
                             <div class="size-btn-wrap">
                                 <button>230</button>
                                 <button>235</button>
@@ -907,8 +951,8 @@
                                         <button class="cart-rec-add-btn"></button>
                                         <div class="cart-rec-add-overlay">
                                             <div>
-                                                <div class="custom-select">
-                                                    <select>
+                                                <div>
+                                                    <select class="custom-select">
                                                         <option value="056" disabled>056 (품절)</option>
                                                         <option value="058">058</option>
                                                         <option value="105">105</option>
@@ -1500,82 +1544,39 @@
                 });
             },
             initComponents: function () {
-
-                $('.custom-select').each(function () {
-                    var $wrapper = $(this);
-                    var $select = $wrapper.find('.select-input');
-                    var $btn = $wrapper.find('.select-btn');
-                    var $text = $wrapper.find('.select-text');
-                    var $dropdown = $wrapper.find('.select-dropdown');
-                    var $options = $dropdown.find('li');
-
-                    // 초기 선택값 설정
-                    var initialValue = $select.val();
-                    var $initialOption = $options.filter('[data-value="' + initialValue + '"]');
-
-                    // 초기 선택값이 disabled인 경우 첫 번째 사용 가능한 항목 선택
-                    if ($initialOption.length > 0 && $initialOption.attr('disabled')) {
-                        var $firstAvailable = $options.not('[disabled]').first();
-                        if ($firstAvailable.length > 0) {
-                            initialValue = $firstAvailable.data('value');
-                            var displayText = $firstAvailable.text().replace(/\s*\(품절\)\s*/g, '').trim();
-                            $text.text(displayText);
-                            $firstAvailable.addClass('selected');
-                        }
-                    } else if ($initialOption.length > 0) {
-                        var displayText = $initialOption.text().replace(/\s*\(품절\)\s*/g, '').trim();
-                        $text.text(displayText);
-                        $initialOption.addClass('selected');
-                    }
-
-                    // 버튼 클릭 시 드롭다운 토글
-                    $btn.click(function (e) {
-                        e.stopPropagation();
-                        $wrapper.toggleClass('active');
-                    });
-
-                    // 옵션 클릭 시 선택
-                    $options.click(function (e) {
-                        e.stopPropagation();
-
-                        // disabled인 경우 선택 불가
-                        if ($(this).attr('disabled')) {
-                            return;
-                        }
-
-                        var value = $(this).data('value');
-                        var text = $(this).text().replace(/\s*\(품절\)\s*/g, '').trim();
-
-                        // 선택값 업데이트
-                        $select.val(value);
-                        $text.text(text);
-
-                        // 선택된 옵션 표시 업데이트
-                        $options.removeClass('selected');
-                        $(this).addClass('selected');
-
-                        // 드롭다운 닫기
-                        $wrapper.removeClass('active');
-
-                        // change 이벤트 트리거
-                        $select.trigger('change');
-                    });
-
-                    // 외부 클릭 시 드롭다운 닫기
-                    $(document).click(function (e) {
-                        if (!$wrapper.is(e.target) && $wrapper.has(e.target).length === 0) {
-                            $wrapper.removeClass('active');
-                        }
-                    });
-                });
-
-
                 // .sec-title 클릭 시 해당 섹션의 table 토글
-                $('.toggle-sec .sec-title').click(function () {
+                $('.prd-detail-page  .toggle-sec .sec-title').click(function () {
                     var $section = $(this).closest('.toggle-sec');
                     var $table = $section.find('.toggle-content');
                     $table.slideToggle(350);
                     $(this).toggleClass('closed');
+                });
+
+                // .custom-select 색상 업데이트 함수
+                function updateSelectColor($select) {
+                    var value = $select.val();
+                    var $firstOption = $select.find('option').first();
+                    var firstOptionValue = $firstOption.val() || $firstOption.text();
+
+                    // value가 없거나 첫 번째 옵션(기본값)이면 #999, 그 외에는 #000
+                    if (!value || value === '' || value === firstOptionValue) {
+                        $select.css('color', '#999');
+                    } else {
+                        $select.css('color', '#000');
+                    }
+                }
+
+                // 모든 .custom-select에 대해 초기 색상 설정 및 change 이벤트 리스너 추가
+                $('.prd-detail-page .custom-select').each(function () {
+                    var $select = $(this);
+
+                    // 초기 색상 설정
+                    updateSelectColor($select);
+
+                    // change 이벤트 리스너 추가
+                    $select.on('change', function () {
+                        updateSelectColor($(this));
+                    });
                 });
             }
         }

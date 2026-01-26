@@ -1,0 +1,573 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>프로스펙스</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: 'General Sans';
+            src: url('./font/GeneralSans/GeneralSans-Medium.woff2') format('woff2'),
+                url('./font/GeneralSans/GeneralSans-Medium.woff') format('woff'),
+                url('./font/GeneralSans/GeneralSans-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-display: swap;
+            font-style: normal;
+        }
+
+
+        @font-face {
+            font-family: 'General Sans';
+            src: url('./font/GeneralSans/GeneralSans-Semibold.woff2') format('woff2'),
+                url('./font/GeneralSans/GeneralSans-Semibold.woff') format('woff'),
+                url('./font/GeneralSans/GeneralSans-Semibold.ttf') format('truetype');
+            font-weight: 600;
+            font-display: swap;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/mo.css">
+    <link rel="stylesheet" href="./lib/img-comparison/img-comparison-slider.css" />
+    <div class="prd-detail-page">
+
+        <div class="popup-wrap">
+            <div class="popup-dim"></div>
+            <div class="popup" id="size-select-popup">
+                <div class="popup-head">
+                    <p class="popup-title">사이즈 선택</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <ul class="tabs">
+                        <li>KR 사이즈</li>
+                        <li>사이즈 가이드</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div>
+                            <div class="size-btn-wrap">
+                                <button>230</button>
+                                <button>235</button>
+                                <button disabled>240</button>
+                                <button>245</button>
+                                <button>250</button>
+                                <button>255</button>
+                                <button>260</button>
+                                <button>265</button>
+                                <button>270</button>
+                                <button>275</button>
+                                <button>280</button>
+                            </div>
+                            <div class="result-area">
+                                <ul class="prd-list">
+                                    <li>
+                                        <p class="prd-title">BLACK 275</p>
+                                        <div class="size-quantity-control">
+                                            <button class="decrease-btn" disabled></button>
+                                            <span class="count">0</span>
+                                            <button class="increase-btn"></button>
+                                        </div>
+                                        <div>
+                                            <button class="remove-item-btn"></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="price-info">
+                                    <p>총 상품 금액</p>
+                                    <p>159,9000원</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="size-guide-wrap">
+                                <table>
+                                    <tr>
+                                        <th>KR</th>
+                                        <th>230</th>
+                                        <th>235</th>
+                                        <th>240</th>
+                                        <th>245</th>
+                                        <th>250</th>
+                                        <th>255</th>
+                                        <th>260</th>
+                                        <th>265</th>
+                                        <th>270</th>
+                                    </tr>
+                                    <tr>
+                                        <td>JP</td>
+                                        <td>23</td>
+                                        <td>23.5</td>
+                                        <td>24</td>
+                                        <td>24.5</td>
+                                        <td>25</td>
+                                        <td>25.5</td>
+                                        <td>26</td>
+                                        <td>26.5</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EU</td>
+                                        <td>37</td>
+                                        <td>37.5</td>
+                                        <td>38</td>
+                                        <td>38.5</td>
+                                        <td>39</td>
+                                        <td>39.5</td>
+                                        <td>40</td>
+                                        <td>40.5</td>
+                                        <td>41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>UK</td>
+                                        <td>5</td>
+                                        <td>5.5</td>
+                                        <td>6</td>
+                                        <td>6.5</td>
+                                        <td>7</td>
+                                        <td>7.5</td>
+                                        <td>8</td>
+                                        <td>8.5</td>
+                                        <td>9</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-foot">
+                    <div class="btn-wrap">
+                        <button class="popup-show-btn btn" data-popup="cart-popup">장바구니</button>
+                        <button class="buy-btn btn btn-primary">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup right-popup" id="cart-popup">
+                <div class="popup-head">
+                    <p class="popup-title">장바구니</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <div class="select-area">
+                        <input type="checkbox" id="select-all-chk">
+                        <label for="select-all-chk">전체선택</label>
+                        <span class="count-area">
+                            (<span class="select-cnt">0</span>/<span class="total-select-cnt">0</span>)</span>
+                        <button class="cart-remove-btn">선택 삭제</button>
+                    </div>
+                    <div class="prd-list-wrap">
+                        <ul>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="cart-prd1">
+                                </div>
+                                <div class="right-area">
+                                    <div>
+                                        <div class="thumb-wrap">
+                                            <img src="./img/sample/prd_01.webp" alt="">
+                                        </div>
+                                        <div class="info-area">
+                                            <div>
+                                                <p class="prd-title">듀플렉스 GF</p>
+                                                <p class="raw-price">49,0000원</p>
+                                                <p>
+                                                    <span class="sale-percent">30%</span>
+                                                    <span class="sale-price">49,000원</span>
+                                                </p>
+                                            </div>
+                                            <p class="prd-info">
+                                                <span class="color">BLACK</span>
+                                                <span class="size">230</span>
+                                            </p>
+                                        </div>
+                                        <div class="control-area">
+                                            <div class="cart-quantity-control">
+                                                <button class="decrease-btn" disabled></button>
+                                                <span class="count">0</span>
+                                                <button class="increase-btn"></button>
+                                            </div>
+                                            <button class="remove-item-btn">삭제</button>
+                                        </div>
+                                    </div>
+                                    <button class="buy-item-btn">구매하기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="cart-prd1">
+                                </div>
+                                <div class="right-area">
+                                    <div>
+                                        <div class="thumb-wrap">
+                                            <img src="./img/sample/prd_01.webp" alt="">
+                                        </div>
+                                        <div class="info-area">
+                                            <div>
+                                                <p class="prd-title">듀플렉스 GF</p>
+                                                <p>
+                                                    <span class="sale-price">159,000원</span>
+                                                </p>
+                                            </div>
+                                            <p class="prd-info">
+                                                <span class="color">BLACK</span>
+                                                <span class="size">230</span>
+                                            </p>
+                                        </div>
+                                        <div class="control-area">
+                                            <div class="cart-quantity-control">
+                                                <button class="decrease-btn" disabled></button>
+                                                <span class="count">0</span>
+                                                <button class="increase-btn"></button>
+                                            </div>
+                                            <button class="remove-item-btn">삭제</button>
+                                        </div>
+                                    </div>
+                                    <button class="buy-item-btn" disabled>일시품절</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="cart-prd1">
+                                </div>
+                                <div class="right-area">
+                                    <div>
+                                        <div class="thumb-wrap">
+                                            <img src="./img/sample/prd_01.webp" alt="">
+                                        </div>
+                                        <div class="info-area">
+                                            <div>
+                                                <p class="prd-title">듀플렉스 GF</p>
+                                                <p>
+                                                    <span class="sale-price">159,000원</span>
+                                                </p>
+                                            </div>
+                                            <p class="prd-info">
+                                                <span class="color">BLACK</span>
+                                                <span class="size">230</span>
+                                            </p>
+                                        </div>
+                                        <div class="control-area">
+                                            <div class="cart-quantity-control">
+                                                <button class="decrease-btn" disabled></button>
+                                                <span class="count">0</span>
+                                                <button class="increase-btn"></button>
+                                            </div>
+                                            <button class="remove-item-btn">삭제</button>
+                                        </div>
+                                    </div>
+                                    <button class="buy-item-btn" disabled>일시품절</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cart-rec-area">
+                        <div class="title-area">
+                            <p class="cart-rec-title">추천상품</p>
+                            <div class="btn-wrap">
+                                <button class="prev-btn"></button>
+                                <button class="next-btn"></button>
+                            </div>
+                        </div>
+                        <div class="cart-rec-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="thumb-img">
+                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="prd-title">경량 4패널 러닝캡</p>
+                                        <p>
+                                            <span class="sale-price">49,000원</span>
+                                            <span class="raw-price">69,000원</span>
+                                        </p>
+
+                                        <button class="cart-rec-add-btn"></button>
+                                        <div class="cart-rec-add-overlay">
+                                            <div>
+                                                <select class="custom-select">
+                                                    <option value="056" disabled>056 (품절)</option>
+                                                    <option value="058">058</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                </select>
+                                                <button class="rec-add-cart-btn">장바구니 추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-img">
+                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="prd-title">경량 4패널 러닝캡</p>
+                                        <p>
+                                            <span class="sale-price">49,000원</span>
+                                            <span class="raw-price">69,000원</span>
+                                        </p>
+
+                                        <button class="cart-rec-add-btn"></button>
+                                        <div class="cart-rec-add-overlay">
+                                            <div>
+                                                <select class="custom-select">
+                                                    <option value="056" disabled>056 (품절)</option>
+                                                    <option value="058">058</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                </select>
+                                                <button class="rec-add-cart-btn">장바구니 추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-img">
+                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="prd-title">경량 4패널 러닝캡</p>
+                                        <p class="status-txt">일시품절</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-foot">
+                    <ul class="cart-result-list">
+                        <li>
+                            <span>배송비</span>
+                            <span>무료</span>
+                        </li>
+                        <li>
+                            <span>상품 금액</span>
+                            <span>N/A</span>
+                        </li>
+                        <li class="tot-price-info">
+                            <span>총 주문금액</span>
+                            <span>100,000원</span>
+                        </li>
+                    </ul>
+                    <button class="buy-btn">구매하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="./lib/img-comparison/img-comparison-slider.js"></script>
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script>
+        // GSAP ScrollTrigger 플러그인 등록
+        if (window.gsap && window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+    </script>
+    <script>
+        function initCartPopup() {
+            new Swiper('#cart-popup .cart-rec-swiper', {
+                loop: true,
+                slidesPerView: 1.2,
+                spaceBetween: 8,
+                navigation: {
+                    nextEl: ".next-btn",
+                    prevEl: ".prev-btn",
+                },
+            });
+
+            $('#cart-popup .cart-rec-add-btn').click(function () {
+                $overlay = $(this).closest('.swiper-slide').find('.cart-rec-add-overlay');
+                $overlay.addClass('show');
+                gsap.set($overlay, { opacity: 0, 'overflow': 'hidden' });
+                gsap.to($overlay, {
+                    duration: 0.2,
+                    opacity: 1,
+                    ease: "power2.out",
+                    onComplete: function () {
+                        $overlay.css('overflow', 'unset')
+                    }
+                });
+
+                $overlayDiv = $overlay.children();
+                gsap.set($overlayDiv, { y: '100%' });
+                gsap.to($overlayDiv, {
+                    duration: 0.3,
+                    y: '0',
+                    ease: "power2.out"
+                });
+            })
+
+
+            // .custom-select 색상 업데이트 함수
+            function updateSelectColor($select) {
+                var value = $select.val();
+                var $firstOption = $select.find('option').first();
+                var firstOptionValue = $firstOption.val() || $firstOption.text();
+
+                // value가 없거나 첫 번째 옵션(기본값)이면 #999, 그 외에는 #000
+                if (!value || value === '' || value === firstOptionValue) {
+                    $select.css('color', '#999');
+                } else {
+                    $select.css('color', '#000');
+                }
+            }
+
+            // 모든 .custom-select에 대해 초기 색상 설정 및 change 이벤트 리스너 추가
+            $('.prd-detail-page .custom-select').each(function () {
+                var $select = $(this);
+
+                // 초기 색상 설정
+                updateSelectColor($select);
+
+                // change 이벤트 리스너 추가
+                $select.on('change', function () {
+                    updateSelectColor($(this));
+                });
+            });
+
+            // 오버레이나 외부 클릭 시 오버레이 닫기
+            $(document).on('mousedown', function (e) {
+                var $openedOverlay = $('.cart-rec-add-overlay.show');
+                if ($openedOverlay.length === 0) return;
+
+                // 버튼 눌렀을 땐 닫지 않는다
+                if ($(e.target).closest('.cart-rec-add-overlay button, .cart-rec-add-btn').length) {
+                    return;
+                }
+
+                // 오버레이 내부 클릭시(버튼 제외)는 닫지 않음
+                if ($(e.target).closest('.cart-rec-add-overlay').length) {
+                    return;
+                }
+
+                gsap.set($openedOverlay, { opacity: 1, 'overflow': 'hidden' });
+                gsap.to($overlay, {
+                    delay: 0.1,
+                    duration: 0.2,
+                    opacity: 0,
+                    ease: "power2.in"
+                });
+
+                $overlayDiv = $overlay.children();
+                gsap.set($overlayDiv, { y: '0' });
+                gsap.to($overlayDiv, {
+                    duration: 0.3,
+                    y: '100%',
+                    ease: "power2.in",
+                    onComplete: function () {
+                        $openedOverlay.removeClass('show');
+                    }
+                });
+            });
+        }
+
+        const POPUP = {
+            popupStack: [],
+
+            init: function () {
+                const t = this;
+
+                $('.popup-show-btn').click(function () {
+                    const targetId = $(this).data('popup');
+                    t.show(targetId);
+                });
+
+                $('.popup .close-btn').click(function () {
+                    const popupId = $(this).closest('.popup').attr('id');
+                    t.hide(popupId);
+                });
+
+                $('.popup-dim').click(function (event) {
+                    if (t.popupStack.length === 0) {
+                        return
+                    }
+
+                    const lastPopupId = t.popupStack.pop();
+                    t.hide(lastPopupId);
+                });
+            },
+
+            show: function (popupId) {
+                if (!this.popupStack.includes(popupId)) {
+                    this.popupStack.push(popupId);
+                }
+
+                // 배경 딤 show (gsap fade in)
+                $('.popup-dim').css('display', 'block'); // 보이게 하고
+                $('body').css('overflow', 'hidden');
+
+                const $popup = $('#' + popupId);
+
+                if ($popup.hasClass('right-popup')) {
+
+                    gsap.set($popup, { opacity: 1, display: 'block', x: '100%' });
+
+                    gsap.to($popup, {
+                        duration: 0.3,
+                        x: '0',
+                        ease: "power2.out"
+                    });
+                }
+                else {
+
+                    gsap.set($popup, { opacity: 1, display: 'block', y: '100%' });
+
+                    gsap.to($popup, {
+                        duration: 0.3,
+                        y: '0',
+                        ease: "power2.out"
+                    });
+                }
+
+                gsap.to('.popup-dim', {
+                    duration: 0.3, opacity: 0.7, ease: "power2.out", onComplete: function () {
+                        $('.popup-dim').css('display', 'block');
+                    }
+                });
+            },
+
+            hide: function (popupId) {
+                const $popup = $('#' + popupId);
+
+                gsap.to($popup, {
+                    duration: 0.3,
+                    y: '100%',
+                    ease: "power2.in",
+                    onComplete: function () {
+                        //$popup.css({ display: 'none' });
+                    }
+                });
+
+                this.popupStack = this.popupStack.filter(id => id !== popupId);
+                if (this.popupStack.length === 0) {
+                    $('body').css('overflow', 'auto');
+                    // 배경 딤 fade out
+                    gsap.to('.popup-dim', {
+                        duration: 0.3,
+                        opacity: 0,
+                        ease: "power2.in",
+                        onComplete: function () {
+                            $('.popup-dim').css('display', 'none');
+                        }
+                    });
+                }
+            }
+        };
+
+        initCartPopup();
+        POPUP.init();
+        POPUP.show('cart-popup');
+    </script>
+</body>
+
+</html>
