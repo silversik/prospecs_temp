@@ -1,0 +1,1682 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>프로스펙스</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: 'General Sans';
+            src: url('./font/GeneralSans/GeneralSans-Medium.woff2') format('woff2'),
+                url('./font/GeneralSans/GeneralSans-Medium.woff') format('woff'),
+                url('./font/GeneralSans/GeneralSans-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-display: swap;
+            font-style: normal;
+        }
+
+
+        @font-face {
+            font-family: 'General Sans';
+            src: url('./font/GeneralSans/GeneralSans-Semibold.woff2') format('woff2'),
+                url('./font/GeneralSans/GeneralSans-Semibold.woff') format('woff'),
+                url('./font/GeneralSans/GeneralSans-Semibold.ttf') format('truetype');
+            font-weight: 600;
+            font-display: swap;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/mo.css">
+    <link rel="stylesheet" href="./lib/img-comparison/img-comparison-slider.css" />
+    <div class="prd-detail-page">
+        <div class="sec top-sec">
+            <div class="prd-img-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/sample/mo_top_slide_01.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/sample/mo_top_slide_01.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/sample/mo_top_slide_01.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/sample/mo_top_slide_01.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/sample/mo_top_slide_01.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/sample/mo_top_slide_01.webp" alt="">
+                    </div>
+                </div>
+                <div class="control-area">
+                    <button class="prev-btn"></button>
+                    <div class="custom-fraction">
+                        <span class="current">1</span> / <span class="tot">4</span>
+                    </div>
+                    <button class="next-btn"></button>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="buy-area">
+                <div class="prd-color-btn-wrap">
+                    <button class="selected">
+                        <img src="./img/sample/prd_color_03.webp" alt="">
+                    </button>
+                    <button>
+                        <img src="./img/sample/prd_color_02.webp" alt="">
+                    </button>
+                    <button>
+                        <img src="./img/sample/prd_color_03.webp" alt="">
+                    </button>
+                </div>
+                <p class="opt-title">
+                    BLACK
+                </p>
+                <p class="prd-title">
+                    듀플렉스 GF
+                </p>
+                <div class="price-area">
+                    <p>
+                        <span class="raw-price">159,000원</span>
+                    </p>
+                    <p>
+                        <span class="sale-percent">10%</span>
+                        <span class="sale-price">219,000원</span>
+                    </p>
+                </div>
+                <div class="review-info">
+                    <a href="#">
+                        <ul>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li></li>
+                        </ul>
+                        <span>22개의 리뷰 보기</ㄴ>
+                    </a>
+                </div>
+                <p class="prd-summary-info">
+                    이중 물성 설계의 완벽한 밸런스와 G-Frame의 안정감으로 러닝의 기본을 완성하는 러닝화
+                </p>
+                <p class="opt-title" style="font-weight: 500;">MODEL SIZE</p>
+                <div class="model-item">
+                    <div class="thumb">
+                        <img src="./img/sample/model.webp" alt="">
+                    </div>
+                    <p>Ines: <span class="number">174</span>cm, S 사이즈 착용</p>
+                </div>
+            </div>
+            <div class="float-buy-btn-area">
+                <button class="wish-list-btn"></button>
+                <button class="popup-show-btn show-size-select-btn" data-popup="size-select-popup">구매하기</button>
+            </div>
+        </div>
+        <div class="sec spec-sec">
+            <p class="title">Product Spec</p>
+            <p class="subtitle">270mm 기준으로 사이즈 및 측정 방식에 따라 실제 정보와 소폭의 차이가 있을 수 있습니다.</p>
+            <ul class="spec-list">
+                <li>
+                    <div class="ico">
+                        <img src="./img/sample/spec_item_01.webp" alt="">
+                    </div>
+                    <div>
+                        <p class="item-title">
+                            <span>추천거리</span>
+                            <i class="tooltip-btn"
+                                data-tooltip="신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다. 쿠셔닝이 많을수록 충격은 적고 더 편안합니다. 쿠셔닝이 적을수록 더욱 빠르고 반응성 좋은 러닝이 가능합니다."></i>
+                        </p>
+                        <p class="item-val">20~42K</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ico">
+                        <img src="./img/sample/spec_item_02.webp" alt="">
+                    </div>
+                    <div>
+                        <p class="item-title">
+                            <span>힐 투 토 드랍</span>
+                            <i class="tooltip-btn"
+                                data-tooltip="신발의 지지력은 착지 시 발목이 꺾이는 각도를 결정합니다.듀플렉스GF는 구조적 견고함에 집중했습니다. 안정성이 높을수록 발이 안쪽으로 무너지는 현상은 줄어들고 자세는 바르게 유지됩니다. 오래 달려도 발목의 피로도가 적어, 부상 걱정 없는 편안한 러닝이 가능합니다."></i>
+                        </p>
+                        <p class="item-val">5mm</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ico">
+                        <img src="./img/sample/spec_item_03.webp" alt="">
+                    </div>
+                    <div>
+                        <p class="item-title">
+                            <span>무게</span>
+                            <i class="tooltip-btn"
+                                data-tooltip="신발의 지지력은 착지 시 발목이 꺾이는 각도를 결정합니다.듀플렉스GF는 구조적 견고함에 집중했습니다. 안정성이 높을수록 발이 안쪽으로 무너지는 현상은 줄어들고 자세는 바르게 유지됩니다. 오래 달려도 발목의 피로도가 적어, 부상 걱정 없는 편안한 러닝이 가능합니다."></i>
+                        </p>
+                        <p class="item-val">
+                            <span>320g</span>
+                            <span style="font-size: 10px;letter-spacing: -0.2px;">(270mm)</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ico">
+                        <img src="./img/sample/spec_item_04.webp" alt="">
+                    </div>
+                    <div>
+                        <p class="item-title">
+                            <span>주요 기능</span>
+                            <i class="tooltip-btn"
+                                data-tooltip="신발의 지지력은 착지 시 발목이 꺾이는 각도를 결정합니다.듀플렉스GF는 구조적 견고함에 집중했습니다. 안정성이 높을수록 발이 안쪽으로 무너지는 현상은 줄어들고 자세는 바르게 유지됩니다. 오래 달려도 발목의 피로도가 적어, 부상 걱정 없는 편안한 러닝이 가능합니다."></i>
+                        </p>
+                        <p class="item-val">
+                            안정성
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ico">
+                        <img src="./img/sample/spec_item_04.webp" alt="">
+                    </div>
+                    <div>
+                        <p class="item-title">
+                            <span>주요 기능</span>
+                            <i class="tooltip-btn"
+                                data-tooltip="신발의 지지력은 착지 시 발목이 꺾이는 각도를 결정합니다.듀플렉스GF는 구조적 견고함에 집중했습니다. 안정성이 높을수록 발이 안쪽으로 무너지는 현상은 줄어들고 자세는 바르게 유지됩니다. 오래 달려도 발목의 피로도가 적어, 부상 걱정 없는 편안한 러닝이 가능합니다."></i>
+                        </p>
+                        <p class="item-val">
+                            안정성
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <button class="popup-show-btn" data-popup="prd-spec-popup" style="margin-top: 40px;">제품 스펙 상세보기</button>
+        </div>
+        <div class="sec detail-img-sec">
+            <ul>
+                <li>
+                    <img src="./img/sample/detail_01.webp" alt="">
+                    <div class="txt-wrap">
+                        <p class="title">균형 잡힌 주행 리듬 균형 잡힌 주행</p>
+                        <p class="desc">G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 지원해 러닝 시 안정감을 높였습니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/sample/detail_02.webp" alt="">
+                    <div class="txt-wrap">
+                        <p class="title">부드러운 쿠셔닝과 견고한 지지력</p>
+                        <p class="desc">G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 지원해 러닝 시 안정감을 높였습니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/sample/detail_01.webp" alt="">
+                    <div class="txt-wrap">
+                        <p class="title">발등을 안정적으로 고정</p>
+                        <p class="desc">G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 지원해 러닝 시 안정감을 높였습니다.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sec feature-sec">
+            <div class="title-area">
+                <p class="sec-title">소재</p>
+                <div class="btn-wrap">
+                    <button class="prev-btn"></button>
+                    <button class="next-btn"></button>
+                </div>
+            </div>
+            <div class="feature-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-wrap">
+                            <img src="./img/sample/feature_01.webp" alt="">
+                        </div>
+                        <p class="desc">
+                            <span>G-FRAME</span>
+                            . G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 <br />지원해 러닝 시 안정감을 높였습니다.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-wrap">
+                            <img src="./img/sample/feature_02.webp" alt="">
+                        </div>
+                        <p class="desc">
+                            <span>모노사 엔지니어드 메쉬.</span> 뛰어난 통기성으로 쾌적함을 높이고, 발가락<br />처럼 유연한 움직임이 필요한 부분은 신축성을 더했습니다.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-wrap">
+                            <img src="./img/sample/feature_03.webp" alt="">
+                        </div>
+                        <p class="desc">
+                            <span>힐 패딩 보강.</span> 내부 패딩이 부드럽게 발을 감싸 안정적인 쿠션감으로 편안한 착화감을 줍니다.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img-wrap">
+                            <img src="./img/sample/feature_02.webp" alt="">
+                        </div>
+                        <p class="desc">
+                            <span>G-FRAME</span>
+                            . G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 지원해 러닝 시 안정감을 높였습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="sec struct-design-sec">
+            <p class="sec-title">차별화된 구조 설계</p>
+            <div class="img-area">
+                <div>
+                    <img class="bg" src="./img/sample/footwear_slider_02.webp" alt="">
+                    <button class="spot popup-show-btn" data-popup="struct-design-popup"
+                        style="top:19%;left:21%"></button>
+                    <button class="spot popup-show-btn" data-popup="struct-design-popup"
+                        style="top:41%;left:31%"></button>
+                </div>
+                <div class="bg-wrap">
+                    <img class="bg" src="./img/sample/footwear_slider_01.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="sec size-guide-sec">
+            <p class="sec-title">사이즈 가이드</p>
+            <p class="info">스탠다드 핏 - 정사이즈로 추천드립니다.</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>size <span
+                                    style="display:inline-block;font-size:12px; font-weight:400;transform: translateY(-5px);">(mm)</span>
+                            </th>
+                            <th>230</th>
+                            <th>235</th>
+                            <th>240</th>
+                            <th>245</th>
+                            <th>250</th>
+                            <th>255</th>
+                            <th>260</th>
+                            <th>265</th>
+                            <th>270</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>발 너비</td>
+                            <td>~95</td>
+                            <td>~96.2</td>
+                            <td>~97.4</td>
+                            <td>~98.8</td>
+                            <td>~101</td>
+                            <td>~102.2</td>
+                            <td>~103.4</td>
+                            <td>~104.6</td>
+                            <td>~105.8</td>
+                        </tr>
+                        <tr>
+                            <td>발 길이</td>
+                            <td>~223</td>
+                            <td>~228</td>
+                            <td>~233</td>
+                            <td>~238</td>
+                            <td>~243</td>
+                            <td>~248</td>
+                            <td>~253</td>
+                            <td>~258</td>
+                            <td>~263</td>
+                        </tr>
+                        <tr>
+                            <td>앞꿈치</td>
+                            <td>24.6</td>
+                            <td>24.8</td>
+                            <td>25.1</td>
+                            <td>25.3</td>
+                            <td>25.5</td>
+                            <td>25.8</td>
+                            <td>26</td>
+                            <td>26.2</td>
+                            <td>26.5</td>
+                        </tr>
+                        <tr>
+                            <td>뒷꿈치</td>
+                            <td>33.6</td>
+                            <td>33.9</td>
+                            <td>34.2</td>
+                            <td>34.5</td>
+                            <td>34.8</td>
+                            <td>35.1</td>
+                            <td>35.4</td>
+                            <td>35.7</td>
+                            <td>36</td>
+                        </tr>
+                        <tr>
+                            <td>드롭</td>
+                            <td>9.1</td>
+                            <td>9.1</td>
+                            <td>9.1</td>
+                            <td>9.1</td>
+                            <td>9.5</td>
+                            <td>9.5</td>
+                            <td>9.5</td>
+                            <td>9.5</td>
+                            <td>9.5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="margin-right:1rem;overflow:hidden;">
+                <p class="subtitle">측정방법</p>
+                <div class="img-area">
+                    <img src="./img/size_guide_foot.webp" alt="" style="object-fit: contain;">
+                </div>
+                <ul class="info-list">
+                    <li>
+                        <span>A</span>
+                        <p>발길이</p>
+                        <p>편안하게 발바닥을 운 자세에서, 발의 외곽선을 그린 뒤 측정한 발뒤꿈치
+                            중심에서 두번째 발가락 중심을 지나는 직선을 기준으로 뒤꿈치에서 제일 긴
+                            발가락 끝까지의 길이</p>
+                    </li>
+                    <li>
+                        <span>B</span>
+                        <p>발 너비</p>
+                        <p>편안하게 발바닥을 둔 자세에서, 발의 외곽선을 그린 뒤 측정한 발볼의 제일 넓은 부분의 직선 길이</p>
+                    </li>
+                </ul>
+
+                <div class="style-guide-area">
+                    <p class="style-guide-txt">Ines: 174cm, S 사이즈 착용</p>
+                    <div class="style-guide-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/sample/guide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/sample/guide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/sample/guide_03.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <button class="popup-show-btn" data-popup="style-guide-popup">스타일링 구매하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="sec detail-info-sec toggle-sec">
+            <p class="sec-title closed">
+                상품 상세 정보
+                <i></i>
+            </p>
+            <div class="toggle-content">
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th>소재</th>
+                            <td>ENGINEERED-MESH / PU</td>
+                        </tr>
+                        <tr>
+                            <th>색상</th>
+                            <td>BLACK</td>
+                        </tr>
+                        <tr>
+                            <th>치수</th>
+                            <td>230-280(5mm), 290, 300</td>
+                        </tr>
+                        <tr>
+                            <th>제조사</th>
+                            <td>㈜LS네트웍스</td>
+                        </tr>
+                        <tr>
+                            <th>제조국</th>
+                            <td>한국</td>
+                        </tr>
+                        <tr>
+                            <th>취급시 주의사항</th>
+                            <td>제품 라벨(Label) 및 태그(Tag) 참조</td>
+                        </tr>
+                        <tr>
+                            <th>품질보증기준</th>
+                            <td>구입일로부터 1년 (신발류 중 천연가죽 비율이 60% 이하는 6개월)</td>
+                        </tr>
+                        <tr>
+                            <th>A/S 전화번호</th>
+                            <td>㈜LS네트웍스 고객서비스센터 080-710-1020</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="sec delivery-return-sec toggle-sec" style="padding-top:0;">
+            <p class="sec-title closed">
+                배송 & 반품
+                <i></i>
+            </p>
+            <div class="toggle-content">
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th style="width:177px">배송정보</th>
+                            <td>
+                                배송비는 실 결제금액 기준 30,000원 이상 구매 시 무료입니다. 실 결제금액 30,000원 미만 구매 시 배송비 2,500원은 고객님
+                                부담입니다.<br>
+                                제주도 지역은 기본 배송비(2,500원)에 추가 2,500원이 부담되며, 도서산간 지역은<br />추가 5,000원이 부담됩니다.<br>
+                                일부 도서산간 지역은 배송이 불가하거나 배송이 다소 지연될 수 있습니다.<br>
+                                결제 완료 후 영업일 기준 2~5일 이내에 배송이 됩니다.<br>
+                                (금요일 오후, 주말/공휴일 결제 건은 3~6일 이내 배송)<br>
+                                브랜드 및 품종이 다른 경우 개별(별도 포장)로 배송될 수 있습니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>교환ㆍ반품 신청기간</th>
+                            <td>
+                                단순 고객변심으로 인한 교환·반품 신청은 상품 수령일로부터 7일 이내 가능
+                                단, 배송 상품 등의 내용이 표시·광고 내용과 다르거나 계약내용과 다르게 이행된 경우에는<br>
+                                상품 등을 수령한 날부터 3개월 이내, 그 사실을 안 날 또는 알
+                                수 있었던
+                                날부터 30일 이내
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>교환·반품 배송비</th>
+                            <td>
+                                단순 고객변심으로 인한 교환·반품 시 배송비(왕복 배송비 5,000원)는 고객부담<br>
+                                제주도/도서산간 지역의 교환·반품 시에는 별도의 배송비를 부담하셔야 합니다.<br>
+                                교환·반품 배송비는 상품 발송 시 동봉해 주시거나 지정된 계좌로 입금해 주시면 됩니다.<br>
+                                배송비 입금계좌 : [ KEB하나은행 105-921110-48637 엘에스네트웍스서울지점]
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>교환·반품 불가사유</th>
+                            <td>
+                                포장을 개봉하여 시착 또는 사용하여 상품 등의 가치가 훼손된 경우<br>
+                                단, 상품의 내용을 확인하기 위하여 포장을 개봉한 경우에는 교환/반품이 가능합니다.<br>
+                                고객님의 단순변심으로 인한 교환/반품 요청이 상품을 수령한 날로부터 7일을 경과한 경우<br>
+                                고객님의 책임 있는 사유로 상품 등의 가치가 심하게 파손되거나 훼손된 경우<br>
+                                고객님의 사용 또는 일부 소비에 의하여 상품 등의 가치가 현저히 감소된 경우<br>
+                                시간이 경과되어 재판매가 곤란할 정도로 상품 등의 가치가 상실된 경우. (예: 계절의류)<br>
+                                바지의 기장 수선 등 수선한 상품의 경우<br>
+                                프로스펙스닷컴에서 구입한 상품을 매장에서 교환·반품 하려는 경우 <br>
+                                (온라인에서 구입한 상품은, 온라인에서만 반품을 받습니다.)<br>
+                                반품 하실때는 부속품을 반드시 상품과 동시에 반송해 주십시오.<br>
+                                (구매 명세서, 이너웨어 등의 패키지, 단추 등 상품의 부속품, 상품에 붙어 있는 택·라벨)<br>
+                                기타, '전자상거래 등에서의 소비자보호에 관한 법률'이 정하는 청약철회 제한사유에 해당되는 경우
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>환불관련 안내</th>
+                            <td>
+                                카드결제 : 승인 취소 처리 (반품상품 도착 + 카드사 반영 4~5일 소요)<br>
+                                계좌이체/무통장입금 : 환불계좌로 입금 (반품상품 도착 + 은행 처리 3일 소요)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="sec laundry-sec toggle-sec" style="padding-top:0;">
+            <p class="sec-title closed">
+                세탁방법 및 취급 시 주의사항
+                <i></i>
+            </p>
+            <div class="toggle-content">
+                <ul class="caution-list">
+                    <li>
+                        <img src="./img/laundry_01.svg" alt="">
+                        <p>세탁기에 넣어 가볍게 찬물 세탁</p>
+                    </li>
+                    <li>
+                        <img src="./img/laundry_02.svg" alt="">
+                        <p>표백 불가</p>
+                    </li>
+                    <li>
+                        <img src="./img/laundry_03.svg" alt="">
+                        <p>건조기 사용 금지</p>
+                    </li>
+                    <li>
+                        <img src="./img/laundry_04.svg" alt="">
+                        <p>다림질 금지</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sec rec-prd-sec">
+            <img src="./img/sample/mo_rec_prd_01.webp">
+            <p class="title">
+                강력한 추진력을 원한다면, 인피니트 러시2
+            </p>
+            <p class="desc">넓어진 카본 플레이트가 추진력을 끌어올리며,<br>
+                전·중족부를 넓게 설계한 바텀 구조는 고속 주행에서도 흔들림 없는 안정감을 유지할 수 있습니다.</p>
+            <button>제품 자세히 보기</button>
+        </div>
+        <div class="sec rec-list-sec">
+            <div class="title-area">
+                <p class="sec-title">편안한 러닝룩 추천 제품</p>
+                <div class="btn-wrap">
+                    <button class="prev-btn"></button>
+                    <button class="next-btn"></button>
+                </div>
+            </div>
+            <div class="rec-list-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="./img/sample/rec_slide_01.webp" alt="">
+                            </div>
+                            <p class="title">
+                                러닝 남성 패딩 자켓.
+                            </p>
+                            <p class="desc">
+                                POLARTEC® 소재를 사용해 보온성과 활동성을 모두 갖춘 남성 동계용 러닝 재킷입니다.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="./img/sample/rec_slide_02.webp" alt="">
+                            </div>
+                            <p class="title">
+                                러닝 여성 우븐 자켓
+                            </p>
+                            <p class="desc">
+                                통풍과 경량 기능성을 강조한 간절기 여성 러닝용 자켓입니다.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="./img/sample/rec_slide_03.webp" alt="">
+                            </div>
+                            <p class="title">
+                                러닝 여성 브라탑
+                            </p>
+                            <p class="desc">
+                                G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 지원해 러닝 시 안정감을 높였습니다.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="./img/sample/rec_slide_02.webp" alt="">
+                            </div>
+                            <p class="title">
+                                G-FRAME
+                            </p>
+                            <p class="desc">
+                                G-FRAME 구조로 내외전 방지와 올바른 밸런스 유지를 지원해 러닝 시 안정감을 높였습니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="popup-wrap">
+            <div class="popup-dim"></div>
+            <div class="popup" id="size-select-popup">
+                <div class="popup-head">
+                    <p class="popup-title">사이즈 선택</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <ul class="tabs">
+                        <li>KR 사이즈</li>
+                        <li>사이즈 가이드</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div>
+                            <div class="size-btn-wrap">
+                                <button>230</button>
+                                <button>235</button>
+                                <button disabled>240</button>
+                                <button>245</button>
+                                <button>250</button>
+                                <button>255</button>
+                                <button>260</button>
+                                <button>265</button>
+                                <button>270</button>
+                                <button>275</button>
+                                <button>280</button>
+                            </div>
+                            <div class="result-area">
+                                <ul class="prd-list">
+                                    <li>
+                                        <p class="prd-title">BLACK 275</p>
+                                        <div class="size-quantity-control">
+                                            <button class="decrease-btn" disabled></button>
+                                            <span class="count">0</span>
+                                            <button class="increase-btn"></button>
+                                        </div>
+                                        <div>
+                                            <button class="remove-item-btn"></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="price-info">
+                                    <p>총 상품 금액</p>
+                                    <p>159,9000원</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="size-guide-wrap">
+                                <table>
+                                    <tr>
+                                        <th>KR</th>
+                                        <th>230</th>
+                                        <th>235</th>
+                                        <th>240</th>
+                                        <th>245</th>
+                                        <th>250</th>
+                                        <th>255</th>
+                                        <th>260</th>
+                                        <th>265</th>
+                                        <th>270</th>
+                                    </tr>
+                                    <tr>
+                                        <td>JP</td>
+                                        <td>23</td>
+                                        <td>23.5</td>
+                                        <td>24</td>
+                                        <td>24.5</td>
+                                        <td>25</td>
+                                        <td>25.5</td>
+                                        <td>26</td>
+                                        <td>26.5</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EU</td>
+                                        <td>37</td>
+                                        <td>37.5</td>
+                                        <td>38</td>
+                                        <td>38.5</td>
+                                        <td>39</td>
+                                        <td>39.5</td>
+                                        <td>40</td>
+                                        <td>40.5</td>
+                                        <td>41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>UK</td>
+                                        <td>5</td>
+                                        <td>5.5</td>
+                                        <td>6</td>
+                                        <td>6.5</td>
+                                        <td>7</td>
+                                        <td>7.5</td>
+                                        <td>8</td>
+                                        <td>8.5</td>
+                                        <td>9</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-foot">
+                    <div class="btn-wrap">
+                        <button class="popup-show-btn btn" data-popup="cart-popup">장바구니</button>
+                        <button class="buy-btn btn btn-primary">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup right-popup" id="cart-popup">
+                <div class="popup-head">
+                    <p class="popup-title">장바구니</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <div class="select-area">
+                        <input type="checkbox" id="select-all-chk">
+                        <label for="select-all-chk">전체선택</label>
+                        <span class="count-area">
+                            (<span class="select-cnt">0</span>/<span class="total-select-cnt">0</span>)</span>
+                        <button class="cart-remove-btn">선택 삭제</button>
+                    </div>
+                    <div class="prd-list-wrap">
+                        <ul>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="cart-prd1">
+                                </div>
+                                <div class="right-area">
+                                    <div>
+                                        <div class="thumb-wrap">
+                                            <img src="./img/sample/prd_01.webp" alt="">
+                                        </div>
+                                        <div class="info-area">
+                                            <div>
+                                                <p class="prd-title">듀플렉스 GF</p>
+                                                <p class="raw-price">49,0000원</p>
+                                                <p>
+                                                    <span class="sale-percent">30%</span>
+                                                    <span class="sale-price">49,000원</span>
+                                                </p>
+                                            </div>
+                                            <p class="prd-info">
+                                                <span class="color">BLACK</span>
+                                                <span class="size">230</span>
+                                            </p>
+                                        </div>
+                                        <div class="control-area">
+                                            <div class="cart-quantity-control">
+                                                <button class="decrease-btn" disabled></button>
+                                                <span class="count">0</span>
+                                                <button class="increase-btn"></button>
+                                            </div>
+                                            <button class="remove-item-btn">삭제</button>
+                                        </div>
+                                    </div>
+                                    <button class="buy-item-btn">구매하기</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="cart-prd1">
+                                </div>
+                                <div class="right-area">
+                                    <div>
+                                        <div class="thumb-wrap">
+                                            <img src="./img/sample/prd_01.webp" alt="">
+                                        </div>
+                                        <div class="info-area">
+                                            <div>
+                                                <p class="prd-title">듀플렉스 GF</p>
+                                                <p>
+                                                    <span class="sale-price">159,000원</span>
+                                                </p>
+                                            </div>
+                                            <p class="prd-info">
+                                                <span class="color">BLACK</span>
+                                                <span class="size">230</span>
+                                            </p>
+                                        </div>
+                                        <div class="control-area">
+                                            <div class="cart-quantity-control">
+                                                <button class="decrease-btn" disabled></button>
+                                                <span class="count">0</span>
+                                                <button class="increase-btn"></button>
+                                            </div>
+                                            <button class="remove-item-btn">삭제</button>
+                                        </div>
+                                    </div>
+                                    <button class="buy-item-btn" disabled>일시품절</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="cart-prd1">
+                                </div>
+                                <div class="right-area">
+                                    <div>
+                                        <div class="thumb-wrap">
+                                            <img src="./img/sample/prd_01.webp" alt="">
+                                        </div>
+                                        <div class="info-area">
+                                            <div>
+                                                <p class="prd-title">듀플렉스 GF</p>
+                                                <p>
+                                                    <span class="sale-price">159,000원</span>
+                                                </p>
+                                            </div>
+                                            <p class="prd-info">
+                                                <span class="color">BLACK</span>
+                                                <span class="size">230</span>
+                                            </p>
+                                        </div>
+                                        <div class="control-area">
+                                            <div class="cart-quantity-control">
+                                                <button class="decrease-btn" disabled></button>
+                                                <span class="count">0</span>
+                                                <button class="increase-btn"></button>
+                                            </div>
+                                            <button class="remove-item-btn">삭제</button>
+                                        </div>
+                                    </div>
+                                    <button class="buy-item-btn" disabled>일시품절</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cart-rec-area">
+                        <div class="title-area">
+                            <p class="cart-rec-title">추천상품</p>
+                            <div class="btn-wrap">
+                                <button class="prev-btn"></button>
+                                <button class="next-btn"></button>
+                            </div>
+                        </div>
+                        <div class="cart-rec-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="thumb-img">
+                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="prd-title">경량 4패널 러닝캡</p>
+                                        <p>
+                                            <span class="sale-price">49,000원</span>
+                                            <span class="raw-price">69,000원</span>
+                                        </p>
+
+                                        <button class="cart-rec-add-btn"></button>
+                                        <div class="cart-rec-add-overlay">
+                                            <div>
+                                                <select class="custom-select">
+                                                    <option value="056" disabled>056 (품절)</option>
+                                                    <option value="058">058</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                    <option value="105">105</option>
+                                                </select>
+                                                <button class="rec-add-cart-btn">장바구니 추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-img">
+                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="prd-title">경량 4패널 러닝캡</p>
+                                        <p>
+                                            <span class="sale-price">49,000원</span>
+                                            <span class="raw-price">69,000원</span>
+                                        </p>
+
+                                        <button class="cart-rec-add-btn"></button>
+                                        <div class="cart-rec-add-overlay">
+                                            <div>
+                                                <div class="custom-select">
+                                                    <select>
+                                                        <option value="056" disabled>056 (품절)</option>
+                                                        <option value="058">058</option>
+                                                        <option value="105">105</option>
+                                                        <option value="105">105</option>
+                                                        <option value="105">105</option>
+                                                        <option value="105">105</option>
+                                                    </select>
+                                                </div>
+                                                <button class="rec-add-cart-btn">장바구니 추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-img">
+                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="prd-title">경량 4패널 러닝캡</p>
+                                        <p class="status-txt">일시품절</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-foot">
+                    <ul class="cart-result-list">
+                        <li>
+                            <span>배송비</span>
+                            <span>무료</span>
+                        </li>
+                        <li>
+                            <span>상품 금액</span>
+                            <span>N/A</span>
+                        </li>
+                        <li class="tot-price-info">
+                            <span>총 주문금액</span>
+                            <span>100,000원</span>
+                        </li>
+                    </ul>
+                    <button class="buy-btn">구매하기</button>
+                </div>
+            </div>
+            <div class="popup" id="size-guide-popup">
+                <div class="popup-head">
+                    <p class="popup-title">사이즈 가이드</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <table>
+                        <tr>
+                            <th>KR</th>
+                            <th>230</th>
+                            <th>235</th>
+                            <th>240</th>
+                            <th>245</th>
+                            <th>250</th>
+                            <th>255</th>
+                            <th>260</th>
+                            <th>265</th>
+                            <th>270</th>
+                        </tr>
+                        <tr>
+                            <td>JP</td>
+                            <td>23</td>
+                            <td>23.5</td>
+                            <td>24</td>
+                            <td>24.5</td>
+                            <td>25</td>
+                            <td>25.5</td>
+                            <td>26</td>
+                            <td>26.5</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>EU</td>
+                            <td>37</td>
+                            <td>37.5</td>
+                            <td>38</td>
+                            <td>38.5</td>
+                            <td>39</td>
+                            <td>39.5</td>
+                            <td>40</td>
+                            <td>40.5</td>
+                            <td>41</td>
+                        </tr>
+                        <tr>
+                            <td>UK</td>
+                            <td>5</td>
+                            <td>5.5</td>
+                            <td>6</td>
+                            <td>6.5</td>
+                            <td>7</td>
+                            <td>7.5</td>
+                            <td>8</td>
+                            <td>8.5</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="popup" id="style-guide-popup">
+                <div class="popup-head">
+                    <p class="popup-title">스타일링 구매하기</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <ul class="prd-list">
+                        <li>
+                            <div class="thumb-wrap">
+                                <img src="./img/sample/prd_01.webp" alt="">
+                            </div>
+                            <div class="right-area">
+                                <div>
+                                    <p class="prd-title">러닝 폴라텍 후디</p>
+                                    <p>
+                                        <span class="sale-price">49,000원</span>
+                                        <span class="raw-price">49,000원</span>
+                                    </p>
+                                </div>
+                                <div class="bot-area">
+                                    <select class="custom-select">
+                                        <option value="056" disabled>056 (품절)</option>
+                                        <option value="058">058</option>
+                                        <option value="105">105</option>
+                                    </select>
+                                    <button class="cart-btn">장바구니 추가</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb-wrap">
+                                <img src="./img/sample/prd_01.webp" alt="">
+                            </div>
+                            <div class="right-area">
+                                <div>
+                                    <p class="prd-title">러닝 폴라텍 후디</p>
+                                    <p>
+                                        <span class="sale-price">49,000원</span>
+                                        <span class="raw-price">49,000원</span>
+                                    </p>
+                                </div>
+                                <div class="bot-area">
+                                    <button class="cart-btn" disabled>일시품절</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup" id="prd-spec-popup">
+                <div class="popup-head">
+                    <p class="popup-title">듀플렉스 GF</p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <div class="img-wrap">
+                        <img src="./img/sample/prd_01.webp" alt="">
+                    </div>
+                    <p class="subtitle">
+                        이중 물성 설계의 완벽한 밸런스와 <br>
+                        G-Frame의 안정감으로 러닝의 기본을 완성하는 러닝화
+                    </p>
+                    <ul class="prd-spec-list">
+                        <li>
+                            <div class="spec-title" style="font-weight: 400;">추천 거리</div>
+                            <div class="spec-title">20~42K</div>
+                            <div>
+                                <div class="product-bar">
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-empty"></div>
+                                </div>
+                                <div class="product-bar-labels">
+                                    <span class="product-bar-label">0</span>
+                                    <span class="product-bar-label">10k</span>
+                                    <span class="product-bar-label">20k</span>
+                                    <span class="product-bar-label">30k</span>
+                                    <span class="product-bar-label">40k</span>
+                                    <span class="product-bar-label">50k</span>
+                                </div>
+                            </div>
+                            <div class="spec-desc">
+                                신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다. 쿠셔닝이 많을수록 충격은 적고 더 편안합니다. 쿠셔닝이 적을수록 더욱 빠르고 반응성 좋은 러닝이
+                                가능합니다.
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="spec-title">안정성</div>
+                            <div>
+                                <div class="product-bar">
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-empty"></div>
+                                </div>
+                                <div class="product-bar-labels">
+                                    <span class="product-bar-label">LOW</span>
+                                    <span class="product-bar-label" style="font-weight:600">HIGH</span>
+                                </div>
+                            </div>
+                            <div class="spec-desc">
+                                신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다. 쿠셔닝이 많을수록 충격은 적고 더 편안합니다. 쿠셔닝이 적을수록 더욱 빠르고 반응성 좋은 러닝이
+                                가능합니다.
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="spec-title">반발력</div>
+                            <div>
+                                <div class="product-bar">
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-empty"></div>
+                                </div>
+                            </div>
+                            <div class="spec-desc">
+                                신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다. 쿠셔닝이 많을수록 충격은 적고 더 편안합니다. 쿠셔닝이 적을수록 더욱 빠르고 반응성 좋은 러닝이
+                                가능합니다.
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="spec-title">통기성</div>
+                            <div>
+                                <div class="product-bar">
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-filled"></div>
+                                    <div class="bar-empty"></div>
+                                </div>
+                            </div>
+                            <div class="spec-desc">
+                                신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다. 쿠셔닝이 많을수록 충격은 적고 더 편안합니다. 쿠셔닝이 적을수록 더욱 빠르고 반응성 좋은 러닝이
+                                가능합니다.
+                            </div>
+                        </li>
+
+                        <li class="type2">
+                            <div class="product-visual">
+                                <div>
+                                    <img alt="heel to toe drop" src="./img/sample/spec_img.svg" />
+                                </div>
+                                <div class="product-visual-details">
+                                    <span class="product-visual-label">힐 투 토 드랍</span>
+                                    <span class="product-visual-value">5mm</span>
+                                </div>
+                            </div>
+                            <div class="spec-desc">
+                                신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다. 쿠셔닝이 많을수록 충격은 적고 더 편안합니다. 쿠셔닝이 적을수록 더욱 빠르고 반응성 좋은 러닝이
+                                가능합니다.
+                            </div>
+                        </li>
+
+                        <li class="type2">
+                            <div>
+                                <div class="spec-title">무게</div>
+                                <div class="spec-title" style="font-weight:400">사이즈 270mm</div>
+                            </div>
+                            <span class="prd-weight-value">320g</span>
+                        </li>
+
+                        <li class="type2">
+                            <div class="spec-title">사이즈</div>
+                            <div>
+                                신발의 쿠셔닝 수준은 착지 시 발의 느낌을 결정합니다.
+                            </div>
+                        </li>
+
+                        <li class="type3">
+                            <div class="spec-title">디테일</div>
+                            <ul class="prd-details-list">
+                                <li>G-FRAME 구조가 내·외전 동작을 효과적으로 제어</li>
+                                <li>균형 잡힌 주행 리듬 유지</li>
+                                <li>슈퍼폼과 슈퍼라이트를 결합한 이중 물성 미드솔</li>
+                                <li>부드러운 쿠셔닝과 견고한 지지력 동시 구현</li>
+                                <li>모노사로 짠 엔지니어드 어퍼로 뛰어난 통기성</li>
+                                <li>든든한 서포트로 발을 쾌적하게 보호</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup" id="struct-design-popup">
+                <div class="popup-head">
+                    <div>
+                        <p class="popup-title">
+                            <img src="./img/sample/g_frame.webp" alt="" style="width: 91px;">
+                        </p>
+                    </div>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <img src="./img/sample/grab-popup-img.jpg" alt="" style="width:100%">
+                    <p class="popup-subtitle">지면 지지 구간에서 발생하는 흔들림을 통제하여, 신체 활동에 안정감을 제공하는 기능성 구조입니다. </p>
+                </div>
+
+            </div>
+            <div class="popup" id="spec-tooltip-popup">
+                <div class="popup-head">
+                    <p class="popup-title" id="spec-tooltip-title"></p>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="popup-body">
+                    <p class="popup-subtitle" id="spec-tooltip-content"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="./lib/img-comparison/img-comparison-slider.js"></script>
+    <script src="./lib/gsap/gsap.min.js"></script>
+    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
+    <script>
+        // GSAP ScrollTrigger 플러그인 등록
+        if (window.gsap && window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+    </script>
+    <script>
+        const PRD_DETAIL_PAGE = {
+            init: function () {
+                this.initTopSec();
+                this.initSpecSec();
+                this.initDetailImgSec();
+                this.initFeatureSec();
+
+                this.initStructDesignSec();
+                this.initStyleGuideSec();
+                this.initRecListSec();
+                this.initSizeSelectPopup();
+                this.initCartPopup();
+                this.initComponents();
+            },
+            initTopSec: function () {
+                const swiper = new Swiper('.top-sec .prd-img-swiper', {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: 8,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        type: 'progressbar',
+                    },
+                    navigation: {
+                        nextEl: ".next-btn",
+                        prevEl: ".prev-btn",
+                    },
+                    on: {
+                        slideChange: function (swiper) {
+                            updateCustomFaction(swiper);
+                        }
+                    }
+                });
+
+                function updateCustomFaction(swiper) {
+                    const $fraction = $(swiper.el).find('.custom-fraction');
+                    $fraction.find('.current').text(swiper.realIndex + 1);
+
+                    $fraction.find('.tot').text(swiper.slides.length);
+                }
+                updateCustomFaction(swiper);
+            },
+            initSpecSec: function () {
+                $('.spec-sec .tooltip-btn').each(function () {
+                    var $btn = $(this);
+                    var tooltipText = $btn.data('tooltip');
+
+                    if (!tooltipText) return;
+
+                    $btn.css('cursor', 'pointer').click(function (e) {
+                        e.stopPropagation();
+
+                        // .item-title의 span 텍스트를 제목으로 가져오기
+                        var titleText = $btn.closest('.item-title').find('span').text();
+
+                        // popup에 제목과 내용 설정
+                        $('#spec-tooltip-title').text(titleText);
+                        $('#spec-tooltip-content').text(tooltipText);
+
+                        // popup 표시
+                        PRD_DETAIL_POPUP.show('spec-tooltip-popup');
+                    });
+                });
+            },
+            initDetailImgSec: function () {
+                // .txt-wrap 클릭시 .closed toggle
+                $('.detail-img-sec .txt-wrap').click(function (e) {
+                    var $desc = $(this).find('.desc');
+                    var $txtWrap = $(this);
+                    if ($desc.is(':visible')) {
+                        $desc.stop(true, true).slideUp(200);
+                        $txtWrap.removeClass('show-desc');
+                    } else {
+                        $desc.stop(true, true).slideDown(200);
+                        $txtWrap.addClass('show-desc');
+                    }
+                });
+            },
+            initFeatureSec: function () {
+                new Swiper('.feature-sec .feature-swiper', {
+                    loop: true,
+                    slidesPerView: 1.1,
+                    spaceBetween: 8,
+                    navigation: {
+                        nextEl: '.feature-sec .next-btn',
+                        prevEl: '.feature-sec .prev-btn',
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+
+                })
+            },
+            initStructDesignSec: function () {
+                // 40%지점에서 width 0% → 50%
+                gsap.fromTo(
+                    '.struct-design-sec .bg-wrap',
+                    { width: '0%' },
+                    {
+                        width: '50%',
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: '.struct-design-sec',
+                            start: '00% 50%',
+                            end: '40% 50%',
+                            scrub: true,
+                            // markers: true // 가이드선 추가
+                        }
+                    }
+                );
+
+                gsap.fromTo(
+                    '.struct-design-sec .img-area',
+                    { x: '0%' },
+                    {
+                        x: '-60%',
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: '.struct-design-sec',
+                            start: '40% 50%',
+                            end: '60% 50%',
+                            scrub: true,
+                            // markers: true // 가이드선 추가
+                        }
+                    }
+                );
+
+                gsap.fromTo(
+                    '.struct-design-sec .bg-wrap',
+                    { width: '50%' },
+                    {
+                        width: '100%',
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: '.struct-design-sec',
+                            start: '60% 50%',
+                            end: '100% 50%',
+                            scrub: true,
+                            // markers: true // 가이드선 추가
+                        }
+                    }
+                );
+            },
+            initRecListSec: function () {
+                new Swiper('.rec-list-sec .rec-list-swiper', {
+                    slidesPerView: 2,
+                    spaceBetween: 4,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.rec-list-sec .next-btn',
+                        prevEl: '.rec-list-sec .prev-btn',
+                    },
+                    pagination: {
+                        el: '.rec-list-sec .swiper-pagination'
+                    }
+                })
+            },
+            initSizeSelectPopup: function () {
+
+                $tabsLi = $('#size-select-popup .tabs li');
+                $tabsLi.click(function () {
+                    var $this = $(this);
+                    var idx = $this.index();
+
+                    $this.addClass('selected').siblings().removeClass('selected');
+                    var $tabContent = $this.parent().next('.tab-content');
+                    console.log($tabContent);
+                    $tabContent.children().hide();
+                    $tabContent.children().eq(idx).show();
+                });
+                $tabsLi.eq(0).click();
+
+                $('#size-select-popup .size-btn-wrap button').click(function () {
+                    $(this).addClass('selected').siblings().removeClass('selected');
+
+                    if ($(this).hasClass('selected')) {
+                        $('.result-area').show();
+                    }
+                });
+            },
+            initCartPopup: function () {
+                new Swiper('#cart-popup .cart-rec-swiper', {
+                    loop: true,
+                    slidesPerView: 1.2,
+                    spaceBetween: 8,
+                    navigation: {
+                        nextEl: ".next-btn",
+                        prevEl: ".prev-btn",
+                    },
+                });
+
+                $('.cart-rec-add-btn').click(function () {
+                    $overlay = $(this).closest('.swiper-slide').find('.cart-rec-add-overlay');
+                    $overlay.addClass('show');
+                    gsap.set($overlay, { opacity: 0, 'overflow': 'hidden' });
+                    gsap.to($overlay, {
+                        duration: 0.2,
+                        opacity: 1,
+                        ease: "power2.out",
+                        onComplete: function () {
+                            $overlay.css('overflow', 'unset')
+                        }
+                    });
+
+                    $overlayDiv = $overlay.children();
+                    gsap.set($overlayDiv, { y: '100%' });
+                    gsap.to($overlayDiv, {
+                        duration: 0.3,
+                        y: '0',
+                        ease: "power2.out"
+                    });
+                })
+
+                // 오버레이나 외부 클릭 시 오버레이 닫기
+                $(document).on('mousedown', function (e) {
+                    var $openedOverlay = $('.cart-rec-add-overlay.show');
+                    if ($openedOverlay.length === 0) return;
+
+                    // 버튼 눌렀을 땐 닫지 않는다
+                    if ($(e.target).closest('.cart-rec-add-overlay button, .cart-rec-add-btn').length) {
+                        return;
+                    }
+
+                    // 오버레이 내부 클릭시(버튼 제외)는 닫지 않음
+                    if ($(e.target).closest('.cart-rec-add-overlay').length) {
+                        return;
+                    }
+
+                    gsap.set($openedOverlay, { opacity: 1, 'overflow': 'hidden' });
+                    gsap.to($overlay, {
+                        delay: 0.1,
+                        duration: 0.2,
+                        opacity: 0,
+                        ease: "power2.in"
+                    });
+
+                    $overlayDiv = $overlay.children();
+                    gsap.set($overlayDiv, { y: '0' });
+                    gsap.to($overlayDiv, {
+                        duration: 0.3,
+                        y: '100%',
+                        ease: "power2.in",
+                        onComplete: function () {
+                            $openedOverlay.removeClass('show');
+                        }
+                    });
+                });
+            },
+            initStyleGuideSec: function () {
+                new Swiper('.size-guide-sec .style-guide-swiper', {
+                    slidesPerView: 1,
+                    loop: true,
+                    pagination: {
+                        el: ".size-guide-sec .swiper-pagination",
+                    },
+                })
+
+                $('#style-guide-popup .cart-btn').click(function () {
+                    PRD_DETAIL_POPUP.hide('style-guide-popup');
+
+                    PRD_DETAIL_POPUP.show('cart-popup');
+                });
+            },
+            initComponents: function () {
+
+                $('.custom-select').each(function () {
+                    var $wrapper = $(this);
+                    var $select = $wrapper.find('.select-input');
+                    var $btn = $wrapper.find('.select-btn');
+                    var $text = $wrapper.find('.select-text');
+                    var $dropdown = $wrapper.find('.select-dropdown');
+                    var $options = $dropdown.find('li');
+
+                    // 초기 선택값 설정
+                    var initialValue = $select.val();
+                    var $initialOption = $options.filter('[data-value="' + initialValue + '"]');
+
+                    // 초기 선택값이 disabled인 경우 첫 번째 사용 가능한 항목 선택
+                    if ($initialOption.length > 0 && $initialOption.attr('disabled')) {
+                        var $firstAvailable = $options.not('[disabled]').first();
+                        if ($firstAvailable.length > 0) {
+                            initialValue = $firstAvailable.data('value');
+                            var displayText = $firstAvailable.text().replace(/\s*\(품절\)\s*/g, '').trim();
+                            $text.text(displayText);
+                            $firstAvailable.addClass('selected');
+                        }
+                    } else if ($initialOption.length > 0) {
+                        var displayText = $initialOption.text().replace(/\s*\(품절\)\s*/g, '').trim();
+                        $text.text(displayText);
+                        $initialOption.addClass('selected');
+                    }
+
+                    // 버튼 클릭 시 드롭다운 토글
+                    $btn.click(function (e) {
+                        e.stopPropagation();
+                        $wrapper.toggleClass('active');
+                    });
+
+                    // 옵션 클릭 시 선택
+                    $options.click(function (e) {
+                        e.stopPropagation();
+
+                        // disabled인 경우 선택 불가
+                        if ($(this).attr('disabled')) {
+                            return;
+                        }
+
+                        var value = $(this).data('value');
+                        var text = $(this).text().replace(/\s*\(품절\)\s*/g, '').trim();
+
+                        // 선택값 업데이트
+                        $select.val(value);
+                        $text.text(text);
+
+                        // 선택된 옵션 표시 업데이트
+                        $options.removeClass('selected');
+                        $(this).addClass('selected');
+
+                        // 드롭다운 닫기
+                        $wrapper.removeClass('active');
+
+                        // change 이벤트 트리거
+                        $select.trigger('change');
+                    });
+
+                    // 외부 클릭 시 드롭다운 닫기
+                    $(document).click(function (e) {
+                        if (!$wrapper.is(e.target) && $wrapper.has(e.target).length === 0) {
+                            $wrapper.removeClass('active');
+                        }
+                    });
+                });
+
+
+                // .sec-title 클릭 시 해당 섹션의 table 토글
+                $('.toggle-sec .sec-title').click(function () {
+                    var $section = $(this).closest('.toggle-sec');
+                    var $table = $section.find('.toggle-content');
+                    $table.slideToggle(350);
+                    $(this).toggleClass('closed');
+                });
+            }
+        }
+        PRD_DETAIL_PAGE.init();
+
+        // gsap을 이용한 팝업 show/hide 애니메이션 적용
+        // gsap이 로드되어 있어야 함
+        const PRD_DETAIL_POPUP = {
+            popupStack: [],
+
+            init: function () {
+                const t = this;
+
+                $('.popup-show-btn').click(function () {
+                    const targetId = $(this).data('popup');
+                    t.show(targetId);
+                });
+
+                $('.popup .close-btn').click(function () {
+                    const popupId = $(this).closest('.popup').attr('id');
+                    t.hide(popupId);
+                });
+
+                $('.popup-dim').click(function (event) {
+                    if (t.popupStack.length === 0) {
+                        return
+                    }
+
+                    const lastPopupId = t.popupStack.pop();
+                    t.hide(lastPopupId);
+                });
+            },
+
+            show: function (popupId) {
+                if (!this.popupStack.includes(popupId)) {
+                    this.popupStack.push(popupId);
+                }
+
+                // 배경 딤 show (gsap fade in)
+                $('.popup-dim').css('display', 'block'); // 보이게 하고
+                $('body').css('overflow', 'hidden');
+
+                const $popup = $('#' + popupId);
+
+                if ($popup.hasClass('right-popup')) {
+
+                    gsap.set($popup, { opacity: 1, display: 'block', x: '100%' });
+
+                    gsap.to($popup, {
+                        duration: 0.3,
+                        x: '0',
+                        ease: "power2.out"
+                    });
+                }
+                else {
+
+                    gsap.set($popup, { opacity: 1, display: 'block', y: '100%' });
+
+                    gsap.to($popup, {
+                        duration: 0.3,
+                        y: '0',
+                        ease: "power2.out"
+                    });
+                }
+
+                gsap.to('.popup-dim', {
+                    duration: 0.3, opacity: 0.7, ease: "power2.out", onComplete: function () {
+                        $('.popup-dim').css('display', 'block');
+                    }
+                });
+            },
+
+            hide: function (popupId) {
+                const $popup = $('#' + popupId);
+
+                gsap.to($popup, {
+                    duration: 0.3,
+                    y: '100%',
+                    ease: "power2.in",
+                    onComplete: function () {
+                        //$popup.css({ display: 'none' });
+                    }
+                });
+
+                this.popupStack = this.popupStack.filter(id => id !== popupId);
+                if (this.popupStack.length === 0) {
+                    $('body').css('overflow', 'auto');
+                    // 배경 딤 fade out
+                    gsap.to('.popup-dim', {
+                        duration: 0.3,
+                        opacity: 0,
+                        ease: "power2.in",
+                        onComplete: function () {
+                            $('.popup-dim').css('display', 'none');
+                        }
+                    });
+                }
+            }
+        };
+        PRD_DETAIL_POPUP.init();
+    </script>
+</body>
+
+</html>
