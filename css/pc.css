@@ -458,11 +458,25 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   justify-content: flex-start;
-}
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(1):last-child), .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(2):last-child), .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(3):last-child) {
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li {
+@media (max-width: 1199px) {
+  .prd-detail-page .spec-sec .inner-container .spec-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .prd-detail-page .spec-sec .inner-container .spec-list > li {
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(4):last-child) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.prd-detail-page .spec-sec .inner-container .spec-list > li {
   position: relative;
   display: flex;
   align-items: center;
@@ -473,51 +487,19 @@
   padding: 20px 0;
   border-bottom: 1px solid #555;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(4):last-child) {
-  grid-template-columns: repeat(2, 1fr);
-}
-@media (min-width: 1920px) {
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(4):last-child) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) {
-  grid-template-columns: repeat(6, 1fr);
-}
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(1),
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(2),
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(3) {
-  grid-column: span 2;
-}
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(4),
-.prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(5) {
-  grid-column: span 3;
-}
-@media (min-width: 1920px) {
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(1),
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(2),
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(3),
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(4),
-  .prd-detail-page .spec-sec .inner-container .spec-list:has(> li:nth-child(5):last-child) li:nth-child(5) {
-    grid-column: span 1;
-  }
-}
-.prd-detail-page .spec-sec .inner-container .spec-list li .ico {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .ico {
   position: relative;
   width: 88px;
   height: 88px;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li .ico img {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .ico img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li .item-title {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .item-title {
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -529,7 +511,7 @@
   line-height: 150%;
   letter-spacing: -0.32px;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li .item-val {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .item-val {
   color: #f8f8f8;
   font-size: 24px;
   font-style: normal;
@@ -537,7 +519,7 @@
   line-height: 150%;
   letter-spacing: -0.48px;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li .tooltip-btn {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .tooltip-btn {
   margin-left: 8px;
   margin-top: -2px;
   display: inline-block;
@@ -547,7 +529,7 @@
   background-size: cover;
   cursor: pointer;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li .spec-tooltip {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .spec-tooltip {
   display: none;
   position: absolute;
   left: 0;
@@ -564,7 +546,7 @@
   letter-spacing: -0.18px;
   z-index: 9;
 }
-.prd-detail-page .spec-sec .inner-container .spec-list li .spec-tooltip .close-spec-tooltip {
+.prd-detail-page .spec-sec .inner-container .spec-list > li .spec-tooltip .close-spec-tooltip {
   position: absolute;
   right: 15px;
   top: 10px;
