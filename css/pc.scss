@@ -152,6 +152,11 @@
       img {
         max-width: none;
         height: 100%;
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
       }
 
       .control-area {
@@ -211,7 +216,7 @@
         letter-spacing: -0.14px;
         text-transform: uppercase;
 
-        >li::after {
+        > li::after {
           margin: 0 4px;
           display: inline-block;
           content: " ";
@@ -222,7 +227,7 @@
           transform: translateY(2px);
         }
 
-        >li:last-of-type::after {
+        > li:last-of-type::after {
           display: none;
         }
       }
@@ -303,7 +308,7 @@
           ul {
             display: flex;
 
-            >li {
+            > li {
               width: 14px;
               height: 14px;
               background: url(../img/sample/review_star.svg) center/contain no-repeat;
@@ -520,7 +525,7 @@
         @media (max-width: 1199px) {
           grid-template-columns: repeat(3, 1fr);
 
-          >li {
+          > li {
             justify-content: center;
           }
         }
@@ -535,8 +540,7 @@
           }
         }
 
-
-        >li {
+        > li {
           position: relative;
           display: flex;
           align-items: center;
@@ -1159,7 +1163,6 @@
         font-weight: 600;
         text-align: left;
         white-space: nowrap;
-
       }
 
       td {
@@ -1179,7 +1182,7 @@
       flex-flow: column;
       gap: 32px;
 
-      >li {
+      > li {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -1188,7 +1191,6 @@
         font-style: normal;
         font-weight: 400;
         line-height: 150%;
-
       }
     }
   }
@@ -1401,7 +1403,7 @@
       gap: 36px;
       width: 100%;
 
-      >li {
+      > li {
         width: 100%;
         height: 160px;
         display: flex;
@@ -1547,7 +1549,7 @@
       .prd-spec-list {
         margin-top: 24px;
 
-        >li {
+        > li {
           padding: 20px 0;
           border-bottom: 1px solid #d8d8d8;
 
@@ -1586,7 +1588,7 @@
           &.type2 {
             display: flex;
 
-            >div:first-of-type {
+            > div:first-of-type {
               min-width: 161px;
             }
 
@@ -1782,7 +1784,9 @@
       display: inline-block;
       vertical-align: middle;
       cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
+      transition:
+        border-color 0.2s,
+        background 0.2s;
       margin: 0;
       position: relative;
 
@@ -1861,7 +1865,7 @@
         li {
           display: flex;
 
-          >div {
+          > div {
             position: relative;
           }
 
@@ -1984,7 +1988,6 @@
             }
 
             .increase-btn {
-
               &::before,
               &::after {
                 content: "";
@@ -1994,7 +1997,6 @@
               }
 
               &::before {
-
                 left: 50%;
                 top: 50%;
                 width: 10px;
@@ -2003,7 +2005,6 @@
               }
 
               &::after {
-
                 left: 50%;
                 top: 50%;
                 width: 1px;
@@ -2187,7 +2188,7 @@
               display: block;
             }
 
-            >div {
+            > div {
               position: absolute;
               left: -1px;
               bottom: 0;

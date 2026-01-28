@@ -1481,52 +1481,39 @@
                 })
             },
             initStructDesignSec: function () {
+                var slider = document.querySelector('.ic-slider');
+                if (!slider) return;
 
-                const $slider = document.querySelector('.ic-slider');
-
-                const slots = ['first', 'second'];
-                const highlights = [
+                var slots = ['first', 'second'];
+                var highlights = [
                     { top: '47.5%', left: '30%' },
                     { top: '49.5%', left: '39.1%' }
                 ];
 
-                slots.forEach(slot => {
-                    const slotWrap = $slider.querySelector(`div[slot="${slot}"].img-wrap`);
-                    if (!slotWrap) {
-                        return;
-                    }
+                slots.forEach(function (slot) {
+                    var slotWrap = slider.querySelector('div[slot="' + slot + '"].img-wrap');
+                    if (!slotWrap) return;
 
-                    highlights.forEach(({ className, top, left }) => {
-                        if (slotWrap.querySelector(`img.${className}`)) return;
-                        const img = document.createElement('img');
-                        img.className = `popup-show-btn spot`;
-                        img.setAttribute('data-popup', 'struct-design-popup');
-                        img.style.top = top;
-                        img.style.left = left;
-                        slotWrap.appendChild(img);
+                    highlights.forEach(function (pos) {
+                        var spot = document.createElement('div');
+                        spot.className = 'popup-show-btn spot';
+                        spot.setAttribute('data-popup', 'struct-design-popup');
+                        spot.style.top = pos.top;
+                        spot.style.left = pos.left;
+                        slotWrap.appendChild(spot);
                     });
                 });
 
-                // .grab-slider의 .handle이 .highlight 보다 왼쪽(핸들 넓이 고려)면 .highlight의 z-index를 9로 변경
-                // 하이라이트 넓이도 고려하여 z-index를 조정
                 function adjustHighlightZIndex() {
-                    console.log('.adjustHighlightZIndex')
-                    const $slider = document.querySelector('.ic-slider');
-                    if (!$slider) return;
-
-                    // handle svg
-                    const handle = $slider.querySelector('svg[slot="handle"]');
+                    var slider = document.querySelector('.ic-slider');
+                    if (!slider) return;
+                    var handle = slider.querySelector('svg[slot="handle"]');
                     if (!handle) return;
+                    var handleRect = handle.getBoundingClientRect();
+                    var handleRight = handleRect.left + handleRect.width;
 
-                    // handle의 우측 경계 (넓이까지 포함)
-                    const handleRect = handle.getBoundingClientRect();
-                    const handleRight = handleRect.left + handleRect.width;
-
-                    $slider.querySelectorAll('img.spot').forEach(function (highlight) {
-                        const highlightRect = highlight.getBoundingClientRect();
-
-                        // 하이라이트의 왼쪽~오른쪽까지의 영역이 handle보다 오른쪽이면 z-index 9, 아니면 기본
-                        // 즉, 하이라이트의 전체 영역이 핸들의 오른쪽에 들어가면 z-index 9
+                    slider.querySelectorAll('div.spot').forEach(function (highlight) {
+                        var highlightRect = highlight.getBoundingClientRect();
                         if (handleRight < highlightRect.left) {
                             highlight.style.zIndex = '9';
                         } else {
@@ -1535,21 +1522,19 @@
                     });
                 }
 
-                // 첫 렌더/최초 반영
                 adjustHighlightZIndex();
 
-                // 핸들 이동에 따라 동적으로 업데이트
-                let lastHandleRight = null;
-                setInterval(() => {
-                    const handle = $slider.querySelector('svg[slot="handle"]');
+                var lastHandleRight = null;
+                setInterval(function () {
+                    var handle = slider.querySelector('svg[slot="handle"]');
                     if (!handle) return;
-                    const rect = handle.getBoundingClientRect();
-                    const handleRight = rect.left + rect.width;
+                    var rect = handle.getBoundingClientRect();
+                    var handleRight = rect.left + rect.width;
                     if (lastHandleRight !== handleRight) {
                         lastHandleRight = handleRight;
                         adjustHighlightZIndex();
                     }
-                }, 50); // 20fps (최적화 필요시 조절)
+                }, 50);
             },
             initRecListSec: function () {
 
@@ -1664,6 +1649,50 @@
                     // 이외에는 가로로 스크롤 이동 및 세로 스크롤 방지
                     e.preventDefault();
                     container.scrollLeft = newScrollLeft;
+                });
+
+                // 드래그앤드롭 기능 추가
+                $('.prd-detail-page .horizontal-scroll').each(function () {
+                    var $container = $(this);
+                    var isDragging = false;
+                    var startX = 0;
+                    var scrollLeft = 0;
+
+                    $container.on('mousedown', function (e) {
+                        isDragging = true;
+                        $container.css('cursor', 'grabbing');
+                        $container.css('user-select', 'none');
+                        startX = e.pageX - $container.offset().left;
+                        scrollLeft = $container.scrollLeft();
+                        e.preventDefault();
+                    });
+
+                    $(document).on('mousemove', function (e) {
+                        if (!isDragging) return;
+                        e.preventDefault();
+                        var x = e.pageX - $container.offset().left;
+                        var walk = (x - startX) * 2; // 스크롤 속도 조절
+                        $container.scrollLeft(scrollLeft - walk);
+                    });
+
+                    $(document).on('mouseup', function () {
+                        if (isDragging) {
+                            isDragging = false;
+                            $container.css('cursor', 'grab');
+                            $container.css('user-select', 'auto');
+                        }
+                    });
+
+                    $container.on('mouseleave', function () {
+                        if (isDragging) {
+                            isDragging = false;
+                            $container.css('cursor', 'grab');
+                            $container.css('user-select', 'auto');
+                        }
+                    });
+
+                    // 마우스 오버 시 grab 커서 표시
+                    $container.css('cursor', 'grab');
                 });
 
                 $('.prd-detail-page .custom-select').each(function () {

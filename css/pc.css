@@ -138,6 +138,10 @@
 .prd-detail-page .top-sec .prd-img-swiper img {
   max-width: none;
   height: 100%;
+  cursor: grab;
+}
+.prd-detail-page .top-sec .prd-img-swiper img:active {
+  cursor: grabbing;
 }
 .prd-detail-page .top-sec .prd-img-swiper .control-area {
   position: absolute;
