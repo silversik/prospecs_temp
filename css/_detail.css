@@ -856,7 +856,7 @@
 }
 .recommend-goods-slide .recommend-btns .selectric-wrapper .selectric > .button {
   width: 30px;
-  background: url("/front/images/renewal/icon_down_gray.svg") no-repeat center center/11px auto;
+  background: url("/front/images/renewal/ico_chevron.svg") no-repeat center center/11px auto;
 }
 .recommend-goods-slide .recommend-btns .selectric-wrapper .selectric-items > .selectric-scroll > ul > li {
   font-size: 14px;
@@ -1310,20 +1310,20 @@
   top: 2px;
 }
 .prd-detail-page .top-sec .buy-area .prd-summary-info {
-    color: #1d1d1d;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: -0.18px;
-    text-transform: uppercase;
-    word-break: break-all;
-    max-height: 80px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  color: #1d1d1d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.18px;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .prd-detail-page .top-sec .buy-area .opt-title {
   margin: 40px 0 8px;
@@ -1481,14 +1481,13 @@
   width: 100%;
   /* Grid 제거하고 Flex 적용 */
   display: flex;
-  flex-flow: row wrap; 
+  flex-flow: row wrap;
   /* gap은 유지하되, 아래 width 계산식에서 gap 크기만큼 빼줘야 함 */
-  gap: 40px; 
+  gap: 40px;
   justify-content: flex-start; /* 왼쪽 정렬 기준 */
 }
 /* [PC 일반 화면: 1200px 이상] */
 @media (min-width: 1200px) {
-
   /* 1. [CASE 1개] 너비 50% ★추가됨 */
   .prd-detail-page .spec-sec .inner-container .spec-list > li:first-child:last-child {
     width: 50%;
@@ -1527,7 +1526,6 @@
 
 /* [CASE 4] 초대형 화면(1440px~) 대응 */
 @media (min-width: 1440px) {
-
   /* 1개일 때: 너비 50% */
   .prd-detail-page .spec-sec .inner-container .spec-list > li:first-child:last-child {
     width: 50%;
@@ -1560,8 +1558,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%; 
-  max-width: none; 
+  width: 100%;
+  max-width: none;
   gap: 18px;
   padding: 20px 0;
   border-bottom: 1px solid #555;
@@ -1852,7 +1850,7 @@
 .prd-detail-page .size-guide-sec {
   padding-top: 115px;
   padding-bottom: 200px;
-  overflow: visible;
+  overflow: hidden;
 }
 .prd-detail-page .size-guide-sec .title-area {
   display: flex;
@@ -1903,20 +1901,61 @@
   object-fit: cover;
 }
 .prd-detail-page .size-guide-sec .size-guide-area .table-area {
-    width:55%;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    cursor: grab;
+  width: 55%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  cursor: grab;
 }
 .prd-detail-page .size-guide-sec .size-guide-area .table-area:active {
   cursor: grabbing;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area {
+  flex-direction: column;
+  align-items: stretch;
 }
 .prd-detail-page .size-guide-sec .size-guide-area .table-area .table-wrapper {
   overflow-x: auto;
   padding-bottom: 16px;
   margin-right: calc(50% - 50vw);
   padding-right: calc(50vw - 50%);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area .table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area .custom-scrollbar {
+  width: 100%;
+  flex-shrink: 0;
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area .custom-scrollbar-track {
+  width: 100%;
+  height: 6px;
+  background: #e8e8e8;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area .custom-scrollbar-thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  min-width: 40px;
+  background: #333;
+  border-radius: 3px;
+  cursor: grab;
+  transition: background 0.15s;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area .custom-scrollbar-thumb:active {
+  cursor: grabbing;
+  background: #000;
+}
+.prd-detail-page .size-guide-sec .size-guide-area .table-area .custom-scrollbar-thumb.dragging {
+  transition: none;
 }
 .prd-detail-page .size-guide-sec .size-guide-area .table-area .table-wrapper table {
   border-collapse: collapse;
@@ -2082,27 +2121,10 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
-.prd-detail-page .toggle-sec .sec-title i::before {
-  display: block;
-  position: absolute;
-  content: " ";
-  top: 50%;
-  left: 0;
+.prd-detail-page .toggle-sec .sec-title .toggle-lottie svg {
   width: 100%;
-  height: 2px;
-  background-color: #1d1d1d;
-  transform: translateY(-50%);
-}
-.prd-detail-page .toggle-sec .sec-title.closed i::after {
-  display: block;
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 50%;
-  width: 2px;
   height: 100%;
-  transform: translateX(-50%);
-  background-color: #1d1d1d;
+  display: block;
 }
 .prd-detail-page .toggle-sec .info-table {
   width: 100%;

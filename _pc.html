@@ -23,7 +23,8 @@
             font-style: normal;
         }
     </style>
-    <link rel="stylesheet" href="./css/pc.css">
+    <link rel="stylesheet" href="./css/_cart.css">
+    <link rel="stylesheet" href="./css/_detail.css">
     <link rel="stylesheet" href="./lib/img-comparison/img-comparison-slider.css" />
     <div class="prd-detail-page">
         <div class="sec top-sec">
@@ -111,9 +112,7 @@
                     <div class="custom-select">
                         <button class="select-btn" type="button">
                             <span class="select-text">056</span>
-                            <span class="select-arrow">
-                                <img src="https://image.prospecs.com/front/images/renewal/icon_down_gray.svg" alt="">
-                            </span>
+                            <span class="select-arrow"></span>
                         </button>
                         <ul class="select-dropdown">
                             <li data-index="0" class="">옵션 1 : 선수명 선택</li>
@@ -149,9 +148,7 @@
                     <div class="custom-select">
                         <button class="select-btn" type="button">
                             <span class="select-text">옵션 2 : 사이즈 선택</span>
-                            <span class="select-arrow">
-                                <img src="https://image.prospecs.com/front/images/renewal/icon_down_gray.svg" alt="">
-                            </span>
+                            <span class="select-arrow"></span>
                         </button>
                         <ul class="select-dropdown">
                             <li data-index="0" class="selected highlighted">옵션 2 : 사이즈 선택</li>
@@ -196,7 +193,8 @@
                 <ul class="spec-list">
                     <li>
                         <div class="ico">
-                            <img src="./img/sample/spec_item_01.webp" alt="">
+                            <lottie-player src="./lottie/windproof.json" background="transparent"
+                                speed="1"></lottie-player>
                         </div>
                         <div>
                             <p class="item-title">
@@ -209,7 +207,8 @@
                     </li>
                     <li>
                         <div class="ico">
-                            <img src="./img/sample/spec_item_02.webp" alt="">
+                            <lottie-player src="./lottie/storage.json" background="transparent"
+                                speed="1"></lottie-player>
                         </div>
                         <div>
                             <p class="item-title">
@@ -222,7 +221,8 @@
                     </li>
                     <li>
                         <div class="ico">
-                            <img src="./img/sample/spec_item_03.webp" alt="">
+                            <lottie-player src="./lottie/ventilation.json" background="transparent"
+                                speed="1"></lottie-player>
                         </div>
                         <div>
                             <p class="item-title">
@@ -238,7 +238,8 @@
                     </li>
                     <li>
                         <div class="ico">
-                            <img src="./img/sample/spec_item_04.webp" alt="">
+                            <lottie-player src="./lottie/storage.json" background="transparent"
+                                speed="1"></lottie-player>
                         </div>
                         <div>
                             <p class="item-title">
@@ -251,21 +252,6 @@
                             </p>
                         </div>
                     </li>
-                    <!-- <li>
-                        <div class="ico">
-                            <img src="./img/sample/spec_item_04.webp" alt="">
-                        </div>
-                        <div>
-                            <p class="item-title">
-                                <span>주요 기능</span>
-                                <i class="tooltip-btn"
-                                    data-tooltip="신발의 지지력은 착지 시 발목이 꺾이는 각도를 결정합니다.듀플렉스GF는 구조적 견고함에 집중했습니다. 안정성이 높을수록 발이 안쪽으로 무너지는 현상은 줄어들고 자세는 바르게 유지됩니다. 오래 달려도 발목의 피로도가 적어, 부상 걱정 없는 편안한 러닝이 가능합니다."></i>
-                            </p>
-                            <p class="item-val">
-                                안정성
-                            </p>
-                        </div>
-                    </li> -->
                 </ul>
                 <div class="bot-area">
                     <p class="desc">
@@ -483,6 +469,11 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="custom-scrollbar" aria-hidden="true">
+                        <div class="custom-scrollbar-track">
+                            <div class="custom-scrollbar-thumb"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <ul class="info-list">
@@ -515,7 +506,7 @@
         <div class="sec detail-info-sec toggle-sec">
             <p class="sec-title">
                 상품 상세 정보
-                <i></i>
+                <i class="toggle-lottie"></i>
             </p>
             <div class="toggle-content">
                 <table class="info-table">
@@ -559,7 +550,7 @@
         <div class="sec delivery-return-sec toggle-sec" style="padding-top:0;">
             <p class="sec-title">
                 배송 & 반품
-                <i></i>
+                <i class="toggle-lottie"></i>
             </p>
             <div class="toggle-content">
                 <table class="info-table">
@@ -626,7 +617,7 @@
         <div class="sec laundry-sec toggle-sec">
             <p class="sec-title">
                 세탁방법 및 취급 시 주의사항
-                <i></i>
+                <i class="toggle-lottie"></i>
             </p>
             <div class="toggle-content">
                 <ul class="caution-list">
@@ -852,7 +843,7 @@
                                                     <button class="select-btn" type="button">
                                                         <span class="select-text">056</span>
                                                         <span class="select-arrow">
-                                                            <img src="./img/ico_select.svg" alt="">
+                                                            <img src="./img/ico_chevron.svg" alt="">
                                                         </span>
                                                     </button>
                                                     <ul class="select-dropdown">
@@ -1307,7 +1298,8 @@
                         <li class="type2">
                             <div class="product-visual">
                                 <div>
-                                    <img alt="heel to toe drop" src="./img/sample/spec_img.svg" />
+                                    <lottie-player src="./lottie/offset.json" background="black" speed="1"
+                                        style="width:46px;filter: invert(1);"></lottie-player>
                                 </div>
                                 <div class="product-visual-details">
                                     <span class="product-visual-label">힐 투 토 드랍</span>
@@ -1367,6 +1359,8 @@
         </div>
     </div>
     <script defer src="./lib/img-comparison/img-comparison-slider.js"></script>
+    <script src="./lib/lottie/lottie-player.js"></script>
+    <script src="./lib/lottie/lottie.min.js"></script>
     <script src="./lib/gsap/gsap.min.js"></script>
     <script>
         const PRD_DETAIL_PAGE = {
@@ -1376,11 +1370,81 @@
                 this.initFeatureSec();
                 this.initStructDesignSec();
                 this.initRecListSec();
+                this.initSizeGuideScrollbar();
 
                 this.initStyleGuidePopup();
                 this.initCartPopup();
 
                 this.initComponents();
+            },
+            initSizeGuideScrollbar: function () {
+                var $area = $('.prd-detail-page .size-guide-sec .size-guide-area .table-area');
+                if (!$area.length) return;
+                var $wrapper = $area.find('.table-wrapper');
+                var $track = $area.find('.custom-scrollbar-track');
+                var $thumb = $area.find('.custom-scrollbar-thumb');
+
+                function updateThumb() {
+                    var el = $wrapper[0];
+                    var scrollWidth = el.scrollWidth;
+                    var clientWidth = el.clientWidth;
+                    if (scrollWidth <= clientWidth) {
+                        $thumb.css({ width: '100%', left: 0 });
+                        return;
+                    }
+                    var trackWidth = $track[0].offsetWidth;
+                    var thumbWidth = Math.max(40, (clientWidth / scrollWidth) * trackWidth);
+                    var maxScroll = scrollWidth - clientWidth;
+                    var scrollLeft = el.scrollLeft;
+                    var thumbLeft = maxScroll > 0 ? (scrollLeft / maxScroll) * (trackWidth - thumbWidth) : 0;
+                    $thumb.css({ width: thumbWidth + 'px', left: thumbLeft + 'px' });
+                }
+
+                $wrapper.on('scroll', updateThumb);
+
+                var drag = { active: false, startX: 0, startLeft: 0 };
+                $thumb.on('mousedown', function (e) {
+                    e.preventDefault();
+                    drag.active = true;
+                    drag.startX = e.pageX;
+                    drag.startLeft = $wrapper[0].scrollLeft;
+                    $thumb.addClass('dragging');
+                });
+                $(document).on('mousemove.sizeGuideScrollbar', function (e) {
+                    if (!drag.active) return;
+                    var trackWidth = $track[0].offsetWidth;
+                    var thumbWidth = parseFloat($thumb.css('width'));
+                    var maxThumbMove = trackWidth - thumbWidth;
+                    var el = $wrapper[0];
+                    var maxScroll = el.scrollWidth - el.clientWidth;
+                    var deltaX = e.pageX - drag.startX;
+                    var thumbDelta = maxThumbMove > 0 ? (deltaX / maxThumbMove) * maxScroll : 0;
+                    el.scrollLeft = Math.max(0, Math.min(maxScroll, drag.startLeft + thumbDelta));
+                });
+                $(document).on('mouseup.sizeGuideScrollbar', function () {
+                    if (drag.active) {
+                        drag.active = false;
+                        $thumb.removeClass('dragging');
+                    }
+                });
+
+                $track.on('click', function (e) {
+                    if (e.target === $thumb[0]) return;
+                    var trackLeft = $track.offset().left;
+                    var thumbWidth = parseFloat($thumb.css('width'));
+                    var clickX = e.pageX - trackLeft;
+                    var trackWidth = $track[0].offsetWidth;
+                    var thumbCenter = parseFloat($thumb.css('left')) + thumbWidth / 2;
+                    var el = $wrapper[0];
+                    var maxScroll = el.scrollWidth - el.clientWidth;
+                    if (maxScroll <= 0) return;
+                    var ratio = (clickX - thumbWidth / 2) / (trackWidth - thumbWidth);
+                    ratio = Math.max(0, Math.min(1, ratio));
+                    el.scrollLeft = ratio * maxScroll;
+                });
+
+                $(window).on('resize', updateThumb);
+                updateThumb();
             },
             initTopSec: function () {
                 new Swiper('.top-sec .prd-img-swiper', {
@@ -1467,6 +1531,21 @@
                         }
                     });
                 });
+
+                // .spec-sec .ico 로티: 뷰포트 진입 시 1회 재생, 벗어났다가 다시 노출되면 1회 재생
+                var specIcoPlayers = document.querySelectorAll('.spec-sec .ico lottie-player');
+                if (specIcoPlayers.length && typeof IntersectionObserver !== 'undefined') {
+                    var specIcoObserver = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (!entry.isIntersecting) return;
+                            var player = entry.target;
+                            if (player.setLooping) player.setLooping(false);
+                            if (player.seek) player.seek(0);
+                            player.play();
+                        });
+                    }, { rootMargin: '0px', threshold: 0.2 });
+                    specIcoPlayers.forEach(function (el) { specIcoObserver.observe(el); });
+                }
             },
             initFeatureSec: function () {
                 new Swiper('.feature-sec .feature-swiper', {
@@ -1767,13 +1846,34 @@
                 });
 
 
-                // .sec-title 클릭 시 해당 섹션의 table 토글
-                $('.prd-detail-page .toggle-sec .sec-title').click(function () {
-                    var $section = $(this).closest('.toggle-sec');
-                    var $table = $section.find('.toggle-content');
-                    $table.slideToggle(350);
-                    $(this).toggleClass('closed');
+                $('.prd-detail-page .toggle-sec .sec-title .toggle-lottie').each(function () {
+                    var container = this;
+                    var anim = lottie.loadAnimation({
+                        container: container,
+                        renderer: 'svg',
+                        loop: false,
+                        autoplay: false,
+                        path: './lottie/plus_minus.json'
+                    });
+                    $(container).data('lottie', anim);
                 });
+
+                // .sec-title 클릭 시 해당 섹션의 table 토글 + plus_minus 로티 재생/역재생
+                $('.prd-detail-page .toggle-sec .sec-title').click(function () {
+                    var $title = $(this);
+                    var $section = $title.closest('.toggle-sec');
+                    var $table = $section.find('.toggle-content');
+                    var isOpening = !$title.hasClass('closed');
+                    $table.slideToggle(350);
+                    $title.toggleClass('closed');
+                    var anim = $title.find('.toggle-lottie').data('lottie');
+                    if (anim) {
+                        var dir = isOpening ? -1 : 1;
+                        anim.setDirection(dir);
+                        anim.play();
+                    }
+                });
+                $('.prd-detail-page .toggle-sec .sec-title').click();
             }
         }
         PRD_DETAIL_PAGE.init();
