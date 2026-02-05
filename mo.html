@@ -36,6 +36,7 @@
         }
     </style>
     <link rel="stylesheet" href="./css/mo.css">
+    <link rel="stylesheet" href="./css/mo_components.css">
     <link rel="stylesheet" href="./lib/img-comparison/img-comparison-slider.css" />
     <div class="prd-detail-page">
         <div class="sec top-sec">
@@ -130,7 +131,7 @@
             <ul class="spec-list">
                 <li>
                     <div class="ico">
-                        <img src="./img/sample/spec_item_01.webp" alt="">
+                        <lottie-player src="./lottie/windproof.json" background="transparent" speed="1"></lottie-player>
                     </div>
                     <div>
                         <p class="item-title">
@@ -143,7 +144,7 @@
                 </li>
                 <li>
                     <div class="ico">
-                        <img src="./img/sample/spec_item_02.webp" alt="">
+                        <lottie-player src="./lottie/storage.json" background="transparent" speed="1"></lottie-player>
                     </div>
                     <div>
                         <p class="item-title">
@@ -156,7 +157,8 @@
                 </li>
                 <li>
                     <div class="ico">
-                        <img src="./img/sample/spec_item_03.webp" alt="">
+                        <lottie-player src="./lottie/ventilation.json" background="transparent"
+                            speed="1"></lottie-player>
                     </div>
                     <div>
                         <p class="item-title">
@@ -172,7 +174,7 @@
                 </li>
                 <li>
                     <div class="ico">
-                        <img src="./img/sample/spec_item_04.webp" alt="">
+                        <lottie-player src="./lottie/storage.json" background="transparent" speed="1"></lottie-player>
                     </div>
                     <div>
                         <p class="item-title">
@@ -187,7 +189,7 @@
                 </li>
                 <li>
                     <div class="ico">
-                        <img src="./img/sample/spec_item_04.webp" alt="">
+                        <lottie-player src="./lottie/storage.json" background="transparent" speed="1"></lottie-player>
                     </div>
                     <div>
                         <p class="item-title">
@@ -294,87 +296,94 @@
         <div class="sec size-guide-sec">
             <p class="sec-title">사이즈 가이드</p>
             <p class="info">스탠다드 핏 - 정사이즈로 추천드립니다.</p>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>size <span
-                                    style="display:inline-block;font-size:12px; font-weight:400;transform: translateY(-5px);">(mm)</span>
-                            </th>
-                            <th>230</th>
-                            <th>235</th>
-                            <th>240</th>
-                            <th>245</th>
-                            <th>250</th>
-                            <th>255</th>
-                            <th>260</th>
-                            <th>265</th>
-                            <th>270</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>발 너비</td>
-                            <td>~95</td>
-                            <td>~96.2</td>
-                            <td>~97.4</td>
-                            <td>~98.8</td>
-                            <td>~101</td>
-                            <td>~102.2</td>
-                            <td>~103.4</td>
-                            <td>~104.6</td>
-                            <td>~105.8</td>
-                        </tr>
-                        <tr>
-                            <td>발 길이</td>
-                            <td>~223</td>
-                            <td>~228</td>
-                            <td>~233</td>
-                            <td>~238</td>
-                            <td>~243</td>
-                            <td>~248</td>
-                            <td>~253</td>
-                            <td>~258</td>
-                            <td>~263</td>
-                        </tr>
-                        <tr>
-                            <td>앞꿈치</td>
-                            <td>24.6</td>
-                            <td>24.8</td>
-                            <td>25.1</td>
-                            <td>25.3</td>
-                            <td>25.5</td>
-                            <td>25.8</td>
-                            <td>26</td>
-                            <td>26.2</td>
-                            <td>26.5</td>
-                        </tr>
-                        <tr>
-                            <td>뒷꿈치</td>
-                            <td>33.6</td>
-                            <td>33.9</td>
-                            <td>34.2</td>
-                            <td>34.5</td>
-                            <td>34.8</td>
-                            <td>35.1</td>
-                            <td>35.4</td>
-                            <td>35.7</td>
-                            <td>36</td>
-                        </tr>
-                        <tr>
-                            <td>드롭</td>
-                            <td>9.1</td>
-                            <td>9.1</td>
-                            <td>9.1</td>
-                            <td>9.1</td>
-                            <td>9.5</td>
-                            <td>9.5</td>
-                            <td>9.5</td>
-                            <td>9.5</td>
-                            <td>9.5</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>size <span
+                                        style="display:inline-block;font-size:12px; font-weight:400;transform: translateY(-5px);">(mm)</span>
+                                </th>
+                                <th>230</th>
+                                <th>235</th>
+                                <th>240</th>
+                                <th>245</th>
+                                <th>250</th>
+                                <th>255</th>
+                                <th>260</th>
+                                <th>265</th>
+                                <th>270</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>발 너비</td>
+                                <td>~95</td>
+                                <td>~96.2</td>
+                                <td>~97.4</td>
+                                <td>~98.8</td>
+                                <td>~101</td>
+                                <td>~102.2</td>
+                                <td>~103.4</td>
+                                <td>~104.6</td>
+                                <td>~105.8</td>
+                            </tr>
+                            <tr>
+                                <td>발 길이</td>
+                                <td>~223</td>
+                                <td>~228</td>
+                                <td>~233</td>
+                                <td>~238</td>
+                                <td>~243</td>
+                                <td>~248</td>
+                                <td>~253</td>
+                                <td>~258</td>
+                                <td>~263</td>
+                            </tr>
+                            <tr>
+                                <td>앞꿈치</td>
+                                <td>24.6</td>
+                                <td>24.8</td>
+                                <td>25.1</td>
+                                <td>25.3</td>
+                                <td>25.5</td>
+                                <td>25.8</td>
+                                <td>26</td>
+                                <td>26.2</td>
+                                <td>26.5</td>
+                            </tr>
+                            <tr>
+                                <td>뒷꿈치</td>
+                                <td>33.6</td>
+                                <td>33.9</td>
+                                <td>34.2</td>
+                                <td>34.5</td>
+                                <td>34.8</td>
+                                <td>35.1</td>
+                                <td>35.4</td>
+                                <td>35.7</td>
+                                <td>36</td>
+                            </tr>
+                            <tr>
+                                <td>드롭</td>
+                                <td>9.1</td>
+                                <td>9.1</td>
+                                <td>9.1</td>
+                                <td>9.1</td>
+                                <td>9.5</td>
+                                <td>9.5</td>
+                                <td>9.5</td>
+                                <td>9.5</td>
+                                <td>9.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="custom-scrollbar" aria-hidden="true" style="padding-right:1rem">
+                    <div class="custom-scrollbar-track">
+                        <div class="custom-scrollbar-thumb"></div>
+                    </div>
+                </div>
             </div>
             <div style="margin-right:1rem;overflow:hidden;">
                 <p class="subtitle">측정방법</p>
@@ -1202,7 +1211,8 @@
                         <li class="type2">
                             <div class="product-visual">
                                 <div>
-                                    <img alt="heel to toe drop" src="./img/sample/spec_img.svg" />
+                                    <lottie-player src="./lottie/offset.json" background="black" speed="1"
+                                        style="width:46px;filter: invert(1);"></lottie-player>
                                 </div>
                                 <div class="product-visual-details">
                                     <span class="product-visual-label">힐 투 토 드랍</span>
@@ -1271,6 +1281,7 @@
         </div>
     </div>
     <script defer src="./lib/img-comparison/img-comparison-slider.js"></script>
+    <script src="./lib/lottie/lottie-player.js"></script>
     <script src="./lib/gsap/gsap.min.js"></script>
     <script src="./lib/gsap/ScrollTrigger.min.js"></script>
     <script>
@@ -1290,6 +1301,8 @@
                 this.initStructDesignSec();
                 this.initStyleGuideSec();
                 this.initRecListSec();
+
+                this.initSizeGuideScrollbar();
                 this.initSizeSelectPopup();
                 this.initCartPopup();
                 this.initComponents();
@@ -1343,6 +1356,21 @@
                         PRD_DETAIL_POPUP.show('spec-tooltip-popup');
                     });
                 });
+
+                // .spec-sec .ico 로티: 뷰포트 진입 시 1회 재생, 벗어났다가 다시 노출되면 1회 재생
+                var specIcoPlayers = document.querySelectorAll('.spec-sec .ico lottie-player');
+                if (specIcoPlayers.length && typeof IntersectionObserver !== 'undefined') {
+                    var specIcoObserver = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (!entry.isIntersecting) return;
+                            var player = entry.target;
+                            if (player.setLooping) player.setLooping(false);
+                            if (player.seek) player.seek(0);
+                            player.play();
+                        });
+                    }, { rootMargin: '0px', threshold: 0.2 });
+                    specIcoPlayers.forEach(function (el) { specIcoObserver.observe(el); });
+                }
             },
             initDetailImgSec: function () {
                 // .txt-wrap 클릭시 .closed toggle
@@ -1395,7 +1423,7 @@
                     '.struct-design-sec .img-area',
                     { x: '0%' },
                     {
-                        x: '-60%',
+                        x: '-158.933vw',
                         ease: "none",
                         scrollTrigger: {
                             trigger: '.struct-design-sec',
@@ -1542,6 +1570,75 @@
 
                     PRD_DETAIL_POPUP.show('cart-popup');
                 });
+            },
+            initSizeGuideScrollbar: function () {
+                var $area = $('.prd-detail-page .size-guide-sec');
+                if (!$area.length) return;
+                var $wrapper = $area.find('.table-wrapper');
+                var $track = $area.find('.custom-scrollbar-track');
+                var $thumb = $area.find('.custom-scrollbar-thumb');
+
+                function updateThumb() {
+                    var el = $wrapper[0];
+                    var scrollWidth = el.scrollWidth;
+                    var clientWidth = el.clientWidth;
+                    if (scrollWidth <= clientWidth) {
+                        $thumb.css({ width: '100%', left: 0 });
+                        return;
+                    }
+                    var trackWidth = $track[0].offsetWidth;
+                    var thumbWidth = Math.max(40, (clientWidth / scrollWidth) * trackWidth);
+                    var maxScroll = scrollWidth - clientWidth;
+                    var scrollLeft = el.scrollLeft;
+                    var thumbLeft = maxScroll > 0 ? (scrollLeft / maxScroll) * (trackWidth - thumbWidth) : 0;
+                    $thumb.css({ width: thumbWidth + 'px', left: thumbLeft + 'px' });
+                }
+
+                $wrapper.on('scroll', updateThumb);
+
+                var drag = { active: false, startX: 0, startLeft: 0 };
+                $thumb.on('mousedown', function (e) {
+                    e.preventDefault();
+                    drag.active = true;
+                    drag.startX = e.pageX;
+                    drag.startLeft = $wrapper[0].scrollLeft;
+                    $thumb.addClass('dragging');
+                });
+                $(document).on('mousemove.sizeGuideScrollbar', function (e) {
+                    if (!drag.active) return;
+                    var trackWidth = $track[0].offsetWidth;
+                    var thumbWidth = parseFloat($thumb.css('width'));
+                    var maxThumbMove = trackWidth - thumbWidth;
+                    var el = $wrapper[0];
+                    var maxScroll = el.scrollWidth - el.clientWidth;
+                    var deltaX = e.pageX - drag.startX;
+                    var thumbDelta = maxThumbMove > 0 ? (deltaX / maxThumbMove) * maxScroll : 0;
+                    el.scrollLeft = Math.max(0, Math.min(maxScroll, drag.startLeft + thumbDelta));
+                });
+                $(document).on('mouseup.sizeGuideScrollbar', function () {
+                    if (drag.active) {
+                        drag.active = false;
+                        $thumb.removeClass('dragging');
+                    }
+                });
+
+                $track.on('click', function (e) {
+                    if (e.target === $thumb[0]) return;
+                    var trackLeft = $track.offset().left;
+                    var thumbWidth = parseFloat($thumb.css('width'));
+                    var clickX = e.pageX - trackLeft;
+                    var trackWidth = $track[0].offsetWidth;
+                    var thumbCenter = parseFloat($thumb.css('left')) + thumbWidth / 2;
+                    var el = $wrapper[0];
+                    var maxScroll = el.scrollWidth - el.clientWidth;
+                    if (maxScroll <= 0) return;
+                    var ratio = (clickX - thumbWidth / 2) / (trackWidth - thumbWidth);
+                    ratio = Math.max(0, Math.min(1, ratio));
+                    el.scrollLeft = ratio * maxScroll;
+                });
+
+                $(window).on('resize', updateThumb);
+                updateThumb();
             },
             initComponents: function () {
                 // .sec-title 클릭 시 해당 섹션의 table 토글
