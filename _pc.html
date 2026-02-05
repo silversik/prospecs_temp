@@ -506,7 +506,7 @@
         <div class="sec detail-info-sec toggle-sec">
             <p class="sec-title">
                 상품 상세 정보
-                <i class="toggle-lottie"></i>
+                <i></i>
             </p>
             <div class="toggle-content">
                 <table class="info-table">
@@ -550,7 +550,7 @@
         <div class="sec delivery-return-sec toggle-sec" style="padding-top:0;">
             <p class="sec-title">
                 배송 & 반품
-                <i class="toggle-lottie"></i>
+                <i></i>
             </p>
             <div class="toggle-content">
                 <table class="info-table">
@@ -617,7 +617,7 @@
         <div class="sec laundry-sec toggle-sec">
             <p class="sec-title">
                 세탁방법 및 취급 시 주의사항
-                <i class="toggle-lottie"></i>
+                <i></i>
             </p>
             <div class="toggle-content">
                 <ul class="caution-list">
@@ -1489,7 +1489,7 @@
                     // 툴팁 요소 생성
                     var $tooltip = $('<div class="spec-tooltip">' +
                         tooltipText +
-                        '<button class="close-spec-tooltip">✕</button>' +
+                        '<button class="close-spec-tooltip"></button>' +
                         '</div>');
 
                     // tooltip-btn의 부모 요소에 툴팁 추가
@@ -1713,8 +1713,6 @@
                     var maxScrollLeft = container.scrollWidth - container.clientWidth;
                     var newScrollLeft = container.scrollLeft + e.originalEvent.deltaY;
 
-
-
                     // 위로 가려 할 때, 이미 맨 왼쪽인 경우(=시작)
                     if (e.originalEvent.deltaY < 0 && container.scrollLeft <= 0) {
                         // 기본 이벤트(세로 스크롤) 허용
@@ -1845,33 +1843,12 @@
                     });
                 });
 
-
-                $('.prd-detail-page .toggle-sec .sec-title .toggle-lottie').each(function () {
-                    var container = this;
-                    var anim = lottie.loadAnimation({
-                        container: container,
-                        renderer: 'svg',
-                        loop: false,
-                        autoplay: false,
-                        path: './lottie/plus_minus.json'
-                    });
-                    $(container).data('lottie', anim);
-                });
-
                 // .sec-title 클릭 시 해당 섹션의 table 토글 + plus_minus 로티 재생/역재생
-                $('.prd-detail-page .toggle-sec .sec-title').click(function () {
-                    var $title = $(this);
-                    var $section = $title.closest('.toggle-sec');
+                $('.prd-detail-page  .toggle-sec .sec-title').click(function () {
+                    var $section = $(this).closest('.toggle-sec');
                     var $table = $section.find('.toggle-content');
-                    var isOpening = !$title.hasClass('closed');
                     $table.slideToggle(350);
-                    $title.toggleClass('closed');
-                    var anim = $title.find('.toggle-lottie').data('lottie');
-                    if (anim) {
-                        var dir = isOpening ? -1 : 1;
-                        anim.setDirection(dir);
-                        anim.play();
-                    }
+                    $(this).toggleClass('closed');
                 });
                 $('.prd-detail-page .toggle-sec .sec-title').click();
             }
