@@ -3,7 +3,7 @@
   width: 100%;
   height: 2.75rem;
   padding: 0 2.5rem 0 1rem;
-  background: url(../img/ico_chevron.svg) no-repeat right 0.4688rem center #fff;
+  background: url(/front/images/common/icon/chevronDown.svg) no-repeat right 0.4688rem center #fff;
   background-size: 1.25rem;
   border: 0.0625rem solid #000;
   border-radius: 0;
@@ -119,7 +119,7 @@
 .popup .popup-head .close-btn {
   width: 1.5rem;
   height: 1.5rem;
-  background: url(../img/ico_popup_close.svg) center no-repeat;
+  background: url(/front/images/common/icon/close.svg) center no-repeat;
   background-size: cover;
   cursor: pointer;
 }
@@ -140,7 +140,7 @@
 #cart-popup .popup-body {
   overflow-x: hidden;
 }
-#cart-popup .popup-body input[type=checkbox] {
+#cart-popup .popup-body input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -155,9 +155,9 @@
   cursor: pointer;
   margin: 0;
 }
-#cart-popup .popup-body input[type=checkbox]:checked {
+#cart-popup .popup-body input[type="checkbox"]:checked {
   outline: none;
-  background: url(../img/ico_checkbox.svg) center/1.5rem 1.5rem no-repeat;
+  background: url(/front/images/common/icon/checkbox.svg) center/1.5rem 1.5rem no-repeat;
 }
 #cart-popup .popup-body .select-area {
   position: sticky;
@@ -323,7 +323,8 @@
 #cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .decrease-btn:disabled::before {
   background: #8e8e8e;
 }
-#cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn::before, #cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn::after {
+#cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn::before,
+#cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn::after {
   content: "";
   position: absolute;
   background: #1d1d1d;
@@ -343,7 +344,8 @@
   height: 0.75rem;
   transform: translate(-50%, -50%);
 }
-#cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn:disabled::before, #cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn:disabled::after {
+#cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn:disabled::before,
+#cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control .increase-btn:disabled::after {
   background: #8e8e8e;
 }
 #cart-popup .popup-body .prd-list-wrap ul li .right-area .cart-quantity-control span {
@@ -364,7 +366,7 @@
   text-decoration-line: underline;
   text-decoration-style: solid;
   -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
@@ -413,7 +415,7 @@
 #cart-popup .popup-body .cart-rec-area .title-area .btn-wrap button {
   width: 1.125rem;
   height: 1.125rem;
-  background: url(../img/arrow_left.svg) center no-repeat;
+  background: url(/front/images/common/icon/scrollPre.svg) center no-repeat;
   background-size: cover;
 }
 #cart-popup .popup-body .cart-rec-area .title-area .btn-wrap .next-btn {
@@ -469,7 +471,7 @@
   bottom: 1rem;
   width: 2.25rem;
   height: 2.25rem;
-  background: url(../img/cart_rec_add_btn.svg) center no-repeat;
+  background: url(/front/images/detail/img/cart_rec_add_btn.svg) center no-repeat;
   background-size: cover;
 }
 #cart-popup .popup-body .cart-rec-area .cart-rec-swiper .swiper-slide .cart-rec-add-overlay {
@@ -574,4 +576,4 @@
   background: #f0f0f0;
   color: #8e8e8e;
   cursor: not-allowed;
-}/*# sourceMappingURL=mo_components.css.map */
+} /*# sourceMappingURL=mo_components.css.map */
