@@ -2594,7 +2594,7 @@
                             </div>
                         </div>
 
-                        <div class="popup-wrap">
+                        <div class="prd-detail-popup-wrap">
                             <div class="popup-dim"
                                 style="display: none; background-color: rgba(0, 0, 0, 0.7); opacity: 0;"></div>
                             &gt;
@@ -3411,12 +3411,12 @@
                                     t.show(targetId);
                                 });
 
-                                $('.popup .close-btn').click(function () {
+                                $('.prd-detail-popup-wrap .popup .close-btn').click(function () {
                                     const popupId = $(this).closest('.popup').attr('id');
                                     t.hide(popupId);
                                 });
 
-                                $('.popup-dim').click(function (event) {
+                                $('.prd-detail-popup-wrap .popup-dim').click(function (event) {
                                     if (t.popupStack.length === 0) {
                                         return
                                     }
@@ -3427,15 +3427,19 @@
                             },
 
                             show: function (popupId) {
+                                const $popup = $('#' + popupId);
+                                if ($popup.length === 0 || $popup.closest('.prd-detail-popup-wrap').length === 0) {
+                                    return;
+                                }
+
                                 if (!this.popupStack.includes(popupId)) {
                                     this.popupStack.push(popupId);
                                 }
 
                                 // 배경 딤 show (gsap fade in)
-                                $('.popup-dim').css('display', 'block'); // 보이게 하고
+                                $('.prd-detail-popup-wrap .popup-dim').css('display', 'block'); // 보이게 하고
                                 $('body').css('overflow', 'hidden');
 
-                                const $popup = $('#' + popupId);
 
                                 if ($popup.hasClass('right-popup')) {
 
@@ -3458,7 +3462,7 @@
                                     });
                                 }
 
-                                gsap.to('.popup-dim', {
+                                gsap.to('.prd-detail-popup-wrap .popup-dim', {
                                     duration: 0.3,
                                     backgroundColor: 'rgba(0,0,0,0.7)',
                                     ease: "power2.out",
@@ -3484,12 +3488,12 @@
                                 if (this.popupStack.length === 0) {
                                     $('body').css('overflow', 'auto');
                                     // 배경 딤 fade out
-                                    gsap.to('.popup-dim', {
+                                    gsap.to('.prd-detail-popup-wrap .popup-dim', {
                                         duration: 0.3,
-                                        opacity: 0,
+                                        backgroundColor: 'rgba(0,0,0,0)',
                                         ease: "power2.in",
                                         onComplete: function () {
-                                            $('.popup-dim').css('display', 'none');
+                                            $('.prd-detail-popup-wrap .popup-dim').css('display', 'none');
                                         }
                                     });
                                 }
