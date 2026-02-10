@@ -388,7 +388,7 @@
             // Do nothing
         }
 
-        <!--// Google Analytics trace code -->
+        //<!-- Google Analytics trace code -->
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
@@ -397,9 +397,8 @@
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'G-C8BP4VL9PX', 'auto');
-        ga('send', 'pageview'); 
-	 < !--// Google Analytics trace code -->
-
+        ga('send', 'pageview');
+        //<!-- Google Analytics trace code -->
     </script>
 
 
@@ -407,17 +406,17 @@
 
     <!-- Enliple Tracker Start -->
     <script type="text/javascript">
-            (function (a, g, e, n, t) { a.enp = a.enp || function () { (a.enp.q = a.enp.q || []).push(arguments) }; n = g.createElement(e); n.async = !0; n.defer = !0; n.src = "https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js"; t = g.getElementsByTagName(e)[0]; t.parentNode.insertBefore(n, t) })(window, document, "script");
+        (function (a, g, e, n, t) { a.enp = a.enp || function () { (a.enp.q = a.enp.q || []).push(arguments) }; n = g.createElement(e); n.async = !0; n.defer = !0; n.src = "https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js"; t = g.getElementsByTagName(e)[0]; t.parentNode.insertBefore(n, t) })(window, document, "script");
         enp('create', 'common', 'lsnmall', { device: 'M' });  // W:웹, M: 모바일, B: 반응형
         enp('send', 'common', 'lsnmall');
     </script>
     <!-- Enliple Tracker End -->
 
-    <!-- Enliple Insite breakAway Popup start --
-<script type="text/javascript">(function(m,b,r,i,s){m.mbris=m.mbris||function(){(m.mbris.q=m.mbris.q||[]).push(arguments)};i=b.createElement(r);i.async=!0;i.defer=!0;i.src="https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js";0<b.querySelectorAll("script[src*=enp_mbris]").length&&m.ENP_MBRIS_INVOKE?m.ENP_MBRIS_INVOKE():(s=b.getElementsByTagName(r)[0],s.parentNode.insertBefore(i,s))})(window,document,"script");
-mbris("202111313190315869_lsnmall2_3_01,202111313190315870_lsnmall2_3_02");
-</script>
-<!-- Enliple Insite breakAway Popup end -->
+    <!-- Enliple Insite breakAway Popup start -->
+    <!-- <script type="text/javascript">(function (m, b, r, i, s) { m.mbris = m.mbris || function () { (m.mbris.q = m.mbris.q || []).push(arguments) }; i = b.createElement(r); i.async = !0; i.defer = !0; i.src = "https://cdn.megadata.co.kr/dist/prod/enp_mbris.min.js"; 0 < b.querySelectorAll("script[src*=enp_mbris]").length && m.ENP_MBRIS_INVOKE ? m.ENP_MBRIS_INVOKE() : (s = b.getElementsByTagName(r)[0], s.parentNode.insertBefore(i, s)) })(window, document, "script");
+        mbris("202111313190315869_lsnmall2_3_01,202111313190315870_lsnmall2_3_02");
+    </script> -->
+    <!-- Enliple Insite breakAway Popup end -->
 
 
     <!-- 크레센도 에코마케팅으로 대체함으로 주석 처리 -->
@@ -446,17 +445,17 @@ mbris("202111313190315869_lsnmall2_3_01,202111313190315870_lsnmall2_3_02");
 	작성자 : Brandon
 	요청자 : 김광호 과장  
 	내  용 : 공통 스크립트 전제 적용
-
-<script type="text/javascript">
-(function(a,i,u,e,o) {
-a[u]=a[u]||function(){(a[u].q=a[u].q||[]).push(arguments)};e=i.createElement("script");e.async=1;
-e.charset="utf-8"; e.src="//s3.ap-northeast-2.amazonaws.com/static.groobee.io/dist/groobee.min.js";
-o=i.getElementsByTagName("script")[0]; o.parentNode.insertBefore(e,o);
-})(window, document, "groobee");
-groobee("serviceKey", "1e8e02b993a24890a6ee047f87b6ccd3");
-groobee("siteType", "custom");
-</script>
-<!--groobee Script 끝-->
+    -->
+    <!-- <script type="text/javascript">
+        (function (a, i, u, e, o) {
+            a[u] = a[u] || function () { (a[u].q = a[u].q || []).push(arguments) }; e = i.createElement("script"); e.async = 1;
+            e.charset = "utf-8"; e.src = "//s3.ap-northeast-2.amazonaws.com/static.groobee.io/dist/groobee.min.js";
+            o = i.getElementsByTagName("script")[0]; o.parentNode.insertBefore(e, o);
+        })(window, document, "groobee");
+        groobee("serviceKey", "1e8e02b993a24890a6ee047f87b6ccd3");
+        groobee("siteType", "custom");
+    </script> -->
+    <!--groobee Script 끝-->
 
 
     <script type="text/javascript">
@@ -577,7 +576,7 @@ groobee("siteType", "custom");
         function gotoMarket() {
             event.preventDefault(); // 기본 동작 막기 (필요시)
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            var visitedAt =& nbsp; (new Date()).getTime(); // 방문 시간
+            var visitedAt = (new Date()).getTime(); // 방문 시간
 
             if (/android/i.test(userAgent)) {
 
@@ -601,7 +600,7 @@ groobee("siteType", "custom");
                 }
 
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                if (userAgent.match(/iPhone|iPad|iPod/)) {& nbsp; & nbsp;
+                if (userAgent.match(/iPhone|iPad|iPod/)) {
                     window.location.href = "https://applink.byapps.co.kr/openapi/?aid=lsnmall";
                     //https://applink.byapps.co.kr/openapi/?aid=lsnmall&act=web&url=https%3A%2F%2Fm.prospecs.com
                 }
@@ -765,8 +764,8 @@ groobee("siteType", "custom");
 
             <div class="swiper top-txt-banner swiper-initialized swiper-vertical swiper-ios">
                 <div class="swiper-wrapper" id="swiper-wrapper-d6d1b80e54a5fdb6" aria-live="off"
-                    style="transition-duration: 0ms; transform: translate3d(0px, -96px, 0px);">
-                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                    style="transition-duration: 0ms; transform: translate3d(0px, -64px, 0px);">
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
                         style="display: flex; align-items: center; justify-content: center; background: rgb(0, 0, 0); color: rgb(255, 255, 255); height: 32px;"
                         data-swiper-slide-index="1" role="group" aria-label="2 / 2">
                         <p>
@@ -775,7 +774,7 @@ groobee("siteType", "custom");
                         <button class="close-btn" onclick="jfTopBBClose();"></button>
                     </div>
 
-                    <div class="swiper-slide swiper-slide-duplicate-active"
+                    <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
                         style="display: flex; align-items: center; justify-content: center; background: rgb(0, 0, 0); color: rgb(255, 255, 255); height: 32px;"
                         data-swiper-slide-index="0" role="group" aria-label="1 / 2">
                         <p>
@@ -784,7 +783,7 @@ groobee("siteType", "custom");
                         <button class="close-btn" onclick="jfTopBBClose();"></button>
                     </div>
 
-                    <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next"
+                    <div class="swiper-slide swiper-slide-active"
                         style="display: flex; align-items: center; justify-content: center; background: rgb(0, 0, 0); color: rgb(255, 255, 255); height: 32px;"
                         data-swiper-slide-index="1" role="group" aria-label="2 / 2">
                         <p>
@@ -793,7 +792,7 @@ groobee("siteType", "custom");
                         <button class="close-btn" onclick="jfTopBBClose();"></button>
                     </div>
 
-                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
                         style="display: flex; align-items: center; justify-content: center; background: rgb(0, 0, 0); color: rgb(255, 255, 255); height: 32px;"
                         data-swiper-slide-index="0" role="group" aria-label="1 / 2">
                         <p>
@@ -2130,7 +2129,8 @@ groobee("siteType", "custom");
                                     <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
                                         class="swiper-pagination-bullet"></span><span
                                         class="swiper-pagination-bullet"></span><span
-                                        class="swiper-pagination-bullet"></span></div>
+                                        class="swiper-pagination-bullet"></span>
+                                </div>
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                             </div>
                         </div>
@@ -2571,7 +2571,8 @@ groobee("siteType", "custom");
                                     <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span
                                         class="swiper-pagination-bullet"></span><span
                                         class="swiper-pagination-bullet"></span><span
-                                        class="swiper-pagination-bullet"></span></div>
+                                        class="swiper-pagination-bullet"></span>
+                                </div>
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                             </div>
                         </div>
@@ -3541,9 +3542,9 @@ groobee("siteType", "custom");
 
 
 
-        <!--	마케팅 -->
-        < !--Enliple Tracker Start-- >
-        var qty_cnt = Number($('#stock_qty').text());
+                        // <!--	마케팅 -->
+                        // < !--Enliple Tracker Start-- >
+                        var qty_cnt = Number($('#stock_qty').text());
 
                         var ENP_VAR = {
                             collect: {},
@@ -3590,10 +3591,10 @@ groobee("siteType", "custom");
                         /* 네이버페이 전환. (이용하지 않는 경우 삭제) */
                         enp('create', 'conversion', 'lsnmall', { device: 'M', paySys: 'naverPay' });
 
-        < !--Enliple Tracker End-- >
-         
-         < !--크리테오 상품 페이지 트래커-- >
-                            window.criteo_q = window.criteo_q || [];
+                        // < !--Enliple Tracker End-- >
+
+                        //  < !--크리테오 상품 페이지 트래커-- >
+                        window.criteo_q = window.criteo_q || [];
                         window.criteo_q.push(
                             { event: "setAccount", account: 30391 },
                             { event: "setHashedEmail", email: "" },
@@ -3601,13 +3602,13 @@ groobee("siteType", "custom");
                             { event: "viewItem", item: "PR0UR25F302" }
                         );
 
-         
-        < !--WIDERPLANET  SCRIPT START 2017.3.14 -- >
+
+                        // < !--WIDERPLANET  SCRIPT START 2017.3.14 -- >
 
 
 
-        
-        var wptg_tagscript_vars = wptg_tagscript_vars || [];
+
+                        var wptg_tagscript_vars = wptg_tagscript_vars || [];
                         wptg_tagscript_vars.push(
                             (function () {
                                 return {
@@ -3619,24 +3620,24 @@ groobee("siteType", "custom");
                                     , items: [{ i: "PR0UR25F302", t: "듀플렉스 GF" }] /* i:상품 식별번호 (Feed로 제공되는 상품코드와 일치하여야 합니다.) t:상품명 */
                                 };
                             }));
-        
-        < !-- // WIDERPLANET  SCRIPT END 2017.3.14 -->
 
-        < !--구글 GA 전환코드 START-- >
-                            // Measure a view of product details. This example assumes the detail view occurs on pageload,
-                            // and also tracks a standard pageview of the details page.
-                            dataLayer.push({
-                                'ecommerce': {
-                                    'detail': {
-                                        'products': [{
-                                            'name': '듀플렉스 GF',		 // Name or ID is required.
-                                            'id': 'PR0UR25F302',
-                                            'price': '159000',
-                                            'brand': 'P'
-                                        }]
-                                    }
+                        // < !-- // WIDERPLANET  SCRIPT END 2017.3.14 -->
+
+                        // < !--구글 GA 전환코드 START-- >
+                        // Measure a view of product details. This example assumes the detail view occurs on pageload,
+                        // and also tracks a standard pageview of the details page.
+                        dataLayer.push({
+                            'ecommerce': {
+                                'detail': {
+                                    'products': [{
+                                        'name': '듀플렉스 GF',		 // Name or ID is required.
+                                        'id': 'PR0UR25F302',
+                                        'price': '159000',
+                                        'brand': 'P'
+                                    }]
                                 }
-                            });
+                            }
+                        });
 
                         ga('require', 'ec');
                         //'관련상품'의 노출
@@ -3723,7 +3724,6 @@ groobee("siteType", "custom");
                     bottom: calc(6.5rem + env(safe-area-inset-bottom));
                     background-color: transparent;
                     margin: 0;
-                    !important;
                     z-index: 999999;
                 }
 
@@ -4129,7 +4129,7 @@ groobee("siteType", "custom");
                 !function (f, b, e, v, n, t, s) {
                     if (f.fbq) return; n = f.fbq = function () {
                         n.callMethod ?
-                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
                     };
                     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
                     n.queue = []; t = b.createElement(e); t.async = !0;
