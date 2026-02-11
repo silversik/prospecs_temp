@@ -824,8 +824,8 @@ function jfTopBBClose(){
         }
     </style>
 
-    <div class="popup-wrap">
-        <div class="popup-dim" style="display: block; opacity: 0;"></div>
+    <div class="popup-wrap cart-popup-wrap">
+        <div class="popup-dim"></div>
         
         <div class="popup right-popup" id="cart-popup" style="translate: none; rotate: none; scale: none; transform: translate(100%, 0px); display: block; opacity: 1;">
             <div class="popup-head">
@@ -1036,7 +1036,7 @@ function jfTopBBClose(){
 
         }
 
-        const POPUP = {
+        const CART_POPUP = {
             popupStack: [],
 
             init: function () {
@@ -1047,12 +1047,12 @@ function jfTopBBClose(){
                     t.show(targetId);
                 });
 
-                $('.popup .close-btn').click(function () {
+                $('.cart-popup-wrap .popup .close-btn').click(function () {
                     const popupId = $(this).closest('.popup').attr('id');
                     t.hide(popupId);
                 });
 
-                $('.popup-dim').click(function (event) {
+                $('.cart-popup-wrap .popup-dim').click(function (event) {
                     if (t.popupStack.length === 0) {
                         return
                     }
@@ -1063,18 +1063,19 @@ function jfTopBBClose(){
             },
 
             show: function (popupId) {
+                const $popup = $('#' + popupId);
+                if ($popup.length === 0 || $popup.closest('.cart-popup-wrap').length === 0) {
+                    return;
+                }
+
                 if (!this.popupStack.includes(popupId)) {
                     this.popupStack.push(popupId);
                 }
 
                 // 배경 딤 show (gsap fade in)
-               // $('.popup-dim').css('display', 'block'); // 보이게 하고
+                $('.cart-popup-wrap .popup-dim').css('display', 'block'); // 보이게 하고
                 $('html,body').css('overflow', 'hidden');
 
-                const $popup = $('#' + popupId);
-                if (!$popup) {
-                    return
-                }
                 $popup.scrollTop(0);
 
                 if ($popup.hasClass('right-popup')) {
@@ -1095,9 +1096,11 @@ function jfTopBBClose(){
                         ease: "power2.out",
                     });
                 }
-                gsap.to('.popup-dim', {
-                    duration: 0.3, opacity: 0.7, ease: "power2.out", onComplete: function () {
-                        $('.popup-dim').css('display', 'block');
+
+                gsap.to('.cart-popup-wrap .popup-dim', {
+                    duration: 0.3, backgroundColor: 'rgba(0,0,0,0)', ease: "power2.out", 
+                    onComplete: function () {
+                        gsap.to('.cart-popup-wrap .popup-dim').css('display', 'block');
                     }
                 });
                 
@@ -1135,9 +1138,9 @@ function jfTopBBClose(){
                 if (this.popupStack.length === 0) {
                     $('html,body').css('overflow', 'auto');
                     // 배경 딤 fade out
-                    gsap.to('.popup-dim', {
+                    gsap.to('.cart-popup-wrap .popup-dim', {
                         duration: 0.3,
-                        opacity: 0,
+                        backgroundColor: 'rgba(0,0,0,0)',
                         ease: "power2.in",
                         onComplete: function () {
                             $('.popup-dim').css('display', 'none');
@@ -1148,7 +1151,7 @@ function jfTopBBClose(){
         };
 
         initCartPopup();
-        POPUP.init();
+        CART_POPUP.init();
         
         //$(document).ready(function() {	
         	
@@ -3625,12 +3628,12 @@ function jfTopBBClose(){
                     t.show(targetId);
                 });
 
-                $('.popup .close-btn').click(function () {
+                $('.prd-detail-popup-wrap .popup .close-btn').click(function () {
                     const popupId = $(this).closest('.popup').attr('id');
                     t.hide(popupId);
                 });
 
-                $('.popup-dim').click(function (event) {
+                $('.prd-detail-popup-wrap .popup-dim').click(function (event) {
                     if (t.popupStack.length === 0) {
                         return
                     }
@@ -3641,18 +3644,20 @@ function jfTopBBClose(){
             },
 
             show: function (popupId) {
+                const $popup = $('#' + popupId);
+                if ($popup.length === 0 || $popup.closest('.prd-detail-popup-wrap').length === 0) {
+                    return;
+                }
+
                 if (!this.popupStack.includes(popupId)) {
                     this.popupStack.push(popupId);
                 }
 
                 // 배경 딤 show (gsap fade in)
-                $('.popup-dim').css('display', 'block'); // 보이게 하고
+                $('.prd-detail-popup-wrap .popup-dim').css('display', 'block'); // 보이게 하고
+                $('.prd-detail-popup-wrap .popup-dim').css('background-color', 'rgba(0,0,0,0.0)');
                 $('html,body').css('overflow', 'hidden');
 
-                const $popup = $('#' + popupId);
-                if (!$popup) {
-                    return
-                }
                 $popup.scrollTop(0);
 
                 if ($popup.hasClass('right-popup')) {
@@ -3669,14 +3674,13 @@ function jfTopBBClose(){
                     gsap.set($popup, { opacity: 0, display: 'block' });
                     gsap.to($popup, {
                         duration: 0.2,
-                        opacity: 1,
                         ease: "power2.out",
                     });
                 }
                 gsap.to('.popup-dim', {
-                    duration: 0.3, ease: "power2.out", onComplete: function () {
-                        $('.popup-dim').css('display', 'block');
-                    }
+                    duration: 0.3, 
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    ease: "power2.out"
                 });
             },
 
@@ -3710,12 +3714,12 @@ function jfTopBBClose(){
                 if (this.popupStack.length === 0) {
                     $('html,body').css('overflow', 'auto');
                     // 배경 딤 fade out
-                    gsap.to('.popup-dim', {
+                    gsap.to('.prd-detail-popup-wrap .popup-dim', {
                         duration: 0.3,
-                        opacity: 0,
+                        backgroundColor: 'rgba(0,0,0,0)',
                         ease: "power2.in",
                         onComplete: function () {
-                            $('.popup-dim').css('display', 'none');
+                            $('.prd-detail-popup-wrap .popup-dim').css('display', 'none');
                         }
                     });
                 }
@@ -4225,11 +4229,9 @@ function jfTopBBClose(){
    		ga('ec:setAction', 'detail');       // Detail action.
    		ga("send", "pageview");
 
-    	<!--  구글 GA 전환코드 END -->
-
-    	<!-- Retaku script 2020.09.18  일괄 삭제--> 
-
-    	<!-- TMA 스크립트 -->
+    	// <!--  구글 GA 전환코드 END -->
+    	// <!-- Retaku script 2020.09.18  일괄 삭제--> 
+    	// <!-- TMA 스크립트 -->
 
    		function fn_TMAcartAdd(prodcd,prodnm,brandcd,price,prodqty){
    		 	
