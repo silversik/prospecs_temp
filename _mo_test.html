@@ -965,7 +965,8 @@
                 </ul>
             </aside>
             <!-- 멤버쉽카드 -->
-            <div class="popup-dim" style="display: none; background-color: rgba(0, 0, 0, 0.7);">
+            <div class="membership-popup-wrap popup-wrap">
+                <div class="popup-dim"></div>
                 <div class="popup bot-sheet-popup" id="membership-login-popup">
                     <button class="popup-close-btn"></button>
                     <p class="title">
@@ -1276,7 +1277,9 @@
 
             //멤버쉽카드 호출
             function initMemCardPopup() {
-                $('.popup-btn').on('click', function () {
+                $membershipPopupDim = $(".membership-popup-wrap .popup-dim");
+
+                $('aside .popup-btn').on('click', function () {
                     const popupId = '#' + $(this).data('popup') + '-popup';
                     if (popupId == "#membership-login-popup") {
                         $.ajax({
@@ -1304,20 +1307,20 @@
                             }
                         });
                     } else {
-                        $('.popup').hide();
+                        $('.membership-popup-wrap .popup').hide();
                         $(popupId).show();
-                        $(popupId).parent().fadeIn();
+                        $membershipPopupDim.fadeIn();
                     }
                 });
-                $('.popup .popup-close-btn').on('click', function () {
-                    $(this).closest('.popup-dim').fadeOut();
+
+                $('.membership-popup-wrap .popup .popup-close-btn').click(function (e) {
+                    $membershipPopupDim.fadeOut();
                     closeMemCardGnb();
                 });
-                $(".popup-dim").click(function (e) {
-                    if (!$(e.target).closest('.popup').length) {
-                        $(this).fadeOut();
-                        closeMemCardGnb();
-                    }
+
+                $membershipPopupDim.click(function (e) {
+                    $membershipPopupDim.fadeOut();
+                    closeMemCardGnb();
                 });
             }
 
@@ -3438,6 +3441,7 @@
 
                                 // 배경 딤 show (gsap fade in)
                                 $('.prd-detail-popup-wrap .popup-dim').css('display', 'block'); // 보이게 하고
+                                $('.prd-detail-popup-wrap .popup-dim').css('background-color', 'rgba(0,0,0,0.0)');
                                 $('body').css('overflow', 'hidden');
 
 
@@ -3465,10 +3469,7 @@
                                 gsap.to('.prd-detail-popup-wrap .popup-dim', {
                                     duration: 0.3,
                                     backgroundColor: 'rgba(0,0,0,0.7)',
-                                    ease: "power2.out",
-                                    onComplete: function () {
-                                        $('.popup-dim').css('display', 'block');
-                                    }
+                                    ease: "power2.out"
                                 });
                             },
 
