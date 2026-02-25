@@ -1542,8 +1542,8 @@ button{outline:none !important}
 }
 .prd-detail-page #size-select-popup .popup-body .tab-content > div .size-guide-wrap table th:first-of-type,
 .prd-detail-page #size-select-popup .popup-body .tab-content > div .size-guide-wrap table td:first-of-type {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .prd-detail-page #size-select-popup .popup-body .tab-content > div .size-guide-wrap table th:first-child,
 .prd-detail-page #size-select-popup .popup-body .tab-content > div .size-guide-wrap table td:first-child {
@@ -1579,6 +1579,7 @@ button{outline:none !important}
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.0075rem;
+  white-space: nowrap;
 }
 .prd-detail-page #size-select-popup .popup-body .result-area {
   margin-top: 1.5rem;

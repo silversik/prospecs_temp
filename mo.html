@@ -1714,7 +1714,7 @@
 
                 // 배경 딤 show (gsap fade in)
                 $('.popup-dim').css('display', 'block'); // 보이게 하고
-                $('body').css('overflow', 'hidden');
+                $('html,body').css('overflow', 'hidden');
 
                 const $popup = $('#' + popupId);
 
@@ -1760,7 +1760,7 @@
 
                 this.popupStack = this.popupStack.filter(id => id !== popupId);
                 if (this.popupStack.length === 0) {
-                    $('body').css('overflow', 'auto');
+                    $('html,body').css('overflow', 'auto');
                     // 배경 딤 fade out
                     gsap.to('.popup-dim', {
                         duration: 0.3,
