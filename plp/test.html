@@ -660,7 +660,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .footer-bt-menu{display:none;}.has-cart.hide-indicator::after{display:none!important;}
 </style>
 <!-- header -->
-<header class="fixed" style="top: -2px;">
+<header>
 
 	<div class="swiper top-txt-banner topAreaSwiper swiper-initialized swiper-vertical swiper-backface-hidden" style="">
 		<div class="swiper-wrapper" id="swiper-wrapper-4105059baace6e342" aria-live="off" style="transition-duration: 0ms; transform: translate3d(0px, -32px, 0px); transition-delay: 0ms;">
@@ -908,7 +908,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			}
 		}
 
-		window.addEventListener('scroll', onScroll);
+		const fixedHeaderPaths = ['/', '/index.html'];
+		if (fixedHeaderPaths.includes(window.location.pathname)) {
+			header.classList.add('fixed');
+		}
+
+
+		if (header.classList.contains('fixed')) {
+			window.addEventListener('scroll', onScroll);
+		}
+			
 
 		document.querySelector('header .menu-btn').addEventListener('click', function () {
 			//2026 삭제 $('#sideMenuClose').text($('#sideMenuClose').text()=="MENU"?"CLOSE":"MENU");

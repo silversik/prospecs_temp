@@ -99,11 +99,11 @@ html {
 }
 
 body.topSlideY .ps-new main {
-    margin-top: 92px !important
+    /* margin-top: 92px !important */
 }
 
 body:not(.topSlideY) .ps-new main {
-    margin-top: 61px !important
+    /* margin-top: 61px !important */
         /* 배너숨김 시 여백 변경 20260226 */
 }
 
@@ -1775,7 +1775,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 }
 
 .up .ps-new .ps-sub-gnbWrap {
-    top: 52px;
+    /* top: 52px; */
     /* depth 네비 사이벌어짐 수정 20260223 */
 }
 

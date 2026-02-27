@@ -810,7 +810,7 @@ function ngjfAjaxSubmitForm(formId, actionUrl, type, callback, isDisabledEvent) 
 				}
 			},
 			error : function() {
-				alert("오류로 인해 처리되지 않았습니다.");
+				//alert("오류로 인해 처리되지 않았습니다.");
 			}
 		});
 	}
