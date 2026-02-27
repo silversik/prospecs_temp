@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* Pretendard Variable: 가변 폰트 선언 */
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-style: normal;
+  font-weight: 100 900; /* 가변 폰트 전체 범위 지정 */
+  font-display: swap;
+  src: url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/mobile/ux/css/font/PretendardVariable.woff2') format('woff2');
+  unicode-range:
+    U+0020-007F,
+    U+00A0-00FF,
+    U+2000-206F,
+    U+3000-303F,
+    U+3130-318F,
+    U+AC00-D7A3;
+}
+
+@font-face {
+    font-family: 'GeneralSans-semi';
+    src: url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/css/font/GeneralSans-Semibold.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-Regular';
+    src: url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/css/font/GeneralSans-Regular.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GeneralSans-bold';
+    src: url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/css/font/GeneralSans-Bold.otf') format('opentype');
+    font-style: normal;
+}
+
+
+
+/* 전역 폰트 설정 + 렌더링 최적화 */
+html, body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+
+/* 50 단위로 font-weight 클래스를 수동 생성 (45, 100, 150, 200, ... 900, 920) */
+.font-45  { font-weight: 45; }
+.font-100 { font-weight: 100; }
+.font-150 { font-weight: 150; }
+.font-200 { font-weight: 200; }
+.font-250 { font-weight: 250; }
+.font-300 { font-weight: 300; }
+.font-350 { font-weight: 350; }
+.font-400 { font-weight: 400; }
+.font-450 { font-weight: 450; }
+.font-500 { font-weight: 500; }
+.font-550 { font-weight: 550; }
+.font-600 { font-weight: 600; }
+.font-650 { font-weight: 650; }
+.font-700 { font-weight: 700; }
+.font-750 { font-weight: 750; }
+.font-800 { font-weight: 800; }
+.font-850 { font-weight: 850; }
+.font-900 { font-weight: 900; }
+.font-920 { font-weight: 920; }
+

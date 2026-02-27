@@ -1,0 +1,33 @@
+/* Payco 결제 아이콘 강제 텍스트 처리 */
+#paycoText > img {
+	display: none;
+}
+
+#paycoText:after {
+	/* content: "페이코 간편결제"; */
+	display: block;
+	content:'';
+	padding-bottom: 19px;
+	background: url(/mobile/images/renewal/icon_payco.svg) no-repeat center;
+}
+.button_faq {
+    width: 21.7%;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: #222;
+    border: 0.125rem solid #222;
+    height: 3rem;
+    margin-top: 1%;
+    float: right;
+}
+
+.button_faq:hover {
+    background-color: #e7e7e7;
+    color: white;
+}
+
+.text_faq {
+    display:contents;
+    line-height: 5;
+}
