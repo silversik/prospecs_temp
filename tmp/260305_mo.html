@@ -870,7 +870,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  let currentHeaderTop = 0;
 	  let ticking = false;
 	  const onScroll = () => {
-	      const scrollTop = 0;
+	      const scrollTop = Math.max(0, window.scrollY);
 	      const scrollDelta = scrollTop - prevScroll;
 	      // 스크롤 방향에 따라 top 값 계산 (Sticky/Fixed 기준)
 	      currentHeaderTop = Math.max(-headerHeight, Math.min(0, currentHeaderTop - scrollDelta));
@@ -2153,7 +2153,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		if (header && mainBanner) {
 			window.addEventListener('scroll', function () {
 				const bannerRect = mainBanner.getBoundingClientRect();
-				if (bannerRect.bottom < 1) {
+				const headerHeight = header.getBoundingClientRect().height;
+				if (bannerRect.bottom < headerHeight) {
 					header.classList.remove('transparent');
 				} else {
 					header.classList.add('transparent');
