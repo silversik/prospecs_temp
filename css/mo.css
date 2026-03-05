@@ -1409,14 +1409,6 @@
   line-height: 150%;
   letter-spacing: -0.04rem;
 }
-.prd-detail-page #prd-spec-popup .prd-spec-list > li .prd-details-list {
-  color: #1d1d1d;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: -0.0175rem;
-}
 .prd-detail-page #prd-spec-popup .prd-spec-list > li .prd-details-list li::before {
   content: "·";
   display: inline-block;
@@ -1424,6 +1416,14 @@
   color: #1d1d1d;
   font-size: 1rem;
   vertical-align: middle;
+}
+.prd-detail-page #prd-spec-popup .prd-spec-list > li .prd-details-list {
+  color: #1d1d1d;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.0175rem;
 }
 .prd-detail-page #prd-spec-popup .product-bar {
   display: flex;

@@ -35,240 +35,231 @@
             font-style: normal;
         }
     </style>
-    <link rel="stylesheet" href="./css/mo.css">
     <link rel="stylesheet" href="./css/mo_components.css">
-    <link rel="stylesheet" href="./lib/img-comparison/img-comparison-slider.css" />
-    <div class="prd-detail-page">
-
-        <div class="cart-popup-wrap">
-            <div class="popup-dim"></div>
-            <div class="popup right-popup" id="cart-popup">
-                <div class="popup-head">
-                    <p class="popup-title">장바구니</p>
-                    <button class="close-btn"></button>
+    <link rel="stylesheet" href="./css/cart.css">
+    <main>
+        <header
+            style="top:0;left:0;width:100%;height:58px;background-color: red;z-index:1000;color: white;display: flex;align-items: center;justify-content: center;">
+            헤더 영역
+        </header>
+        <div id="cart-page">
+            <div class="body-area">
+                <div class="select-area">
+                    <input type="checkbox" id="select-all-chk">
+                    <label for="select-all-chk">전체선택</label>
+                    <span class="count-area">
+                        (<span class="select-cnt">0</span>/<span class="total-select-cnt">0</span>)</span>
+                    <button class="cart-remove-btn">선택 삭제</button>
                 </div>
-                <div class="popup-body">
-                    <div class="select-area">
-                        <input type="checkbox" id="select-all-chk">
-                        <label for="select-all-chk">전체선택</label>
-                        <span class="count-area">
-                            (<span class="select-cnt">0</span>/<span class="total-select-cnt">0</span>)</span>
-                        <button class="cart-remove-btn">선택 삭제</button>
-                    </div>
-                    <div class="prd-list-wrap">
-                        <ul>
-                            <li>
-                                <div>
-                                    <input type="checkbox" id="cart-prd1">
-                                </div>
-                                <div class="right-area">
-                                    <div>
-                                        <div class="thumb-wrap">
-                                            <img src="./img/sample/prd_01.webp" alt="">
-                                        </div>
-                                        <div class="info-area">
-                                            <div>
-                                                <p class="prd-title">듀플렉스 GF</p>
-                                                <p class="raw-price">49,0000원</p>
-                                                <p>
-                                                    <span class="sale-percent">30%</span>
-                                                    <span class="sale-price">49,000원</span>
-                                                </p>
-                                            </div>
-                                            <p class="prd-info">
-                                                <span class="color">BLACK</span>
-                                                <span class="size">230</span>
-                                            </p>
-                                        </div>
-                                        <div class="control-area">
-                                            <div class="cart-quantity-control">
-                                                <button class="decrease-btn" disabled></button>
-                                                <span class="count">0</span>
-                                                <button class="increase-btn"></button>
-                                            </div>
-                                            <button class="remove-item-btn">삭제</button>
-                                        </div>
-                                    </div>
-                                    <button class="buy-item-btn">구매하기</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <input type="checkbox" id="cart-prd1">
-                                </div>
-                                <div class="right-area">
-                                    <div>
-                                        <div class="thumb-wrap">
-                                            <img src="./img/sample/prd_01.webp" alt="">
-                                        </div>
-                                        <div class="info-area">
-                                            <div>
-                                                <p class="prd-title">듀플렉스 GF</p>
-                                                <p>
-                                                    <span class="sale-price">159,000원</span>
-                                                </p>
-                                            </div>
-                                            <p class="prd-info">
-                                                <span class="color">BLACK</span>
-                                                <span class="size">230</span>
-                                            </p>
-                                        </div>
-                                        <div class="control-area">
-                                            <div class="cart-quantity-control">
-                                                <button class="decrease-btn" disabled></button>
-                                                <span class="count">0</span>
-                                                <button class="increase-btn"></button>
-                                            </div>
-                                            <button class="remove-item-btn">삭제</button>
-                                        </div>
-                                    </div>
-                                    <button class="buy-item-btn" disabled>일시품절</button>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <input type="checkbox" id="cart-prd1">
-                                </div>
-                                <div class="right-area">
-                                    <div>
-                                        <div class="thumb-wrap">
-                                            <img src="./img/sample/prd_01.webp" alt="">
-                                        </div>
-                                        <div class="info-area">
-                                            <div>
-                                                <p class="prd-title">듀플렉스 GF</p>
-                                                <p>
-                                                    <span class="sale-price">159,000원</span>
-                                                </p>
-                                            </div>
-                                            <p class="prd-info">
-                                                <span class="color">BLACK</span>
-                                                <span class="size">230</span>
-                                            </p>
-                                        </div>
-                                        <div class="control-area">
-                                            <div class="cart-quantity-control">
-                                                <button class="decrease-btn" disabled></button>
-                                                <span class="count">0</span>
-                                                <button class="increase-btn"></button>
-                                            </div>
-                                            <button class="remove-item-btn">삭제</button>
-                                        </div>
-                                    </div>
-                                    <button class="buy-item-btn" disabled>일시품절</button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cart-rec-area">
-                        <div class="title-area">
-                            <p class="cart-rec-title">추천상품</p>
-                            <div class="btn-wrap">
-                                <button class="prev-btn"></button>
-                                <button class="next-btn"></button>
-                            </div>
-                        </div>
-                        <div class="cart-rec-swiper swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="thumb-img">
-                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p class="prd-title">경량 4패널 러닝캡</p>
-                                        <p>
-                                            <span class="sale-price">49,000원</span>
-                                            <span class="raw-price">69,000원</span>
-                                        </p>
-
-                                        <button class="cart-rec-add-btn"></button>
-                                        <div class="cart-rec-add-overlay">
-                                            <div>
-                                                <select class="custom-select">
-                                                    <option value="056" disabled>056 (품절)</option>
-                                                    <option value="058">058</option>
-                                                    <option value="105">105</option>
-                                                    <option value="105">105</option>
-                                                    <option value="105">105</option>
-                                                    <option value="105">105</option>
-                                                </select>
-                                                <button class="rec-add-cart-btn">장바구니 추가</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="thumb-img">
-                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p class="prd-title">경량 4패널 러닝캡</p>
-                                        <p>
-                                            <span class="sale-price">49,000원</span>
-                                            <span class="raw-price">69,000원</span>
-                                        </p>
-
-                                        <button class="cart-rec-add-btn"></button>
-                                        <div class="cart-rec-add-overlay">
-                                            <div>
-                                                <select class="custom-select">
-                                                    <option value="056" disabled>056 (품절)</option>
-                                                    <option value="058">058</option>
-                                                    <option value="105">105</option>
-                                                    <option value="105">105</option>
-                                                    <option value="105">105</option>
-                                                    <option value="105">105</option>
-                                                </select>
-                                                <button class="rec-add-cart-btn">장바구니 추가</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="thumb-img">
-                                        <img src="./img/sample/cart_rec_prd.jpg" alt="">
-                                    </div>
-                                    <div>
-                                        <p class="prd-title">경량 4패널 러닝캡</p>
-                                        <p class="status-txt">일시품절</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup-foot">
-                    <ul class="cart-result-list">
+                <div class="prd-list-wrap">
+                    <ul>
                         <li>
-                            <span>배송비</span>
-                            <span>무료</span>
+                            <div>
+                                <input type="checkbox" id="cart-prd1">
+                            </div>
+                            <div class="right-area">
+                                <div>
+                                    <div class="thumb-wrap">
+                                        <img src="./img/sample/prd_01.webp" alt="">
+                                    </div>
+                                    <div class="info-area">
+                                        <div>
+                                            <p class="prd-title">듀플렉스 GF</p>
+                                            <p class="raw-price">49,0000원</p>
+                                            <p>
+                                                <span class="sale-percent">30%</span>
+                                                <span class="sale-price">49,000원</span>
+                                            </p>
+                                        </div>
+                                        <p class="prd-info">
+                                            <span class="color">BLACK</span>
+                                            <span class="size">230</span>
+                                        </p>
+                                    </div>
+                                    <div class="control-area">
+                                        <div class="cart-quantity-control">
+                                            <button class="decrease-btn" disabled></button>
+                                            <span class="count">0</span>
+                                            <button class="increase-btn"></button>
+                                        </div>
+                                        <button class="remove-item-btn">삭제</button>
+                                    </div>
+                                </div>
+                                <button class="buy-item-btn">구매하기</button>
+                            </div>
                         </li>
                         <li>
-                            <span>상품 금액</span>
-                            <span>N/A</span>
+                            <div>
+                                <input type="checkbox" id="cart-prd1">
+                            </div>
+                            <div class="right-area">
+                                <div>
+                                    <div class="thumb-wrap">
+                                        <img src="./img/sample/prd_01.webp" alt="">
+                                    </div>
+                                    <div class="info-area">
+                                        <div>
+                                            <p class="prd-title">듀플렉스 GF</p>
+                                            <p>
+                                                <span class="sale-price">159,000원</span>
+                                            </p>
+                                        </div>
+                                        <p class="prd-info">
+                                            <span class="color">BLACK</span>
+                                            <span class="size">230</span>
+                                        </p>
+                                    </div>
+                                    <div class="control-area">
+                                        <div class="cart-quantity-control">
+                                            <button class="decrease-btn" disabled></button>
+                                            <span class="count">0</span>
+                                            <button class="increase-btn"></button>
+                                        </div>
+                                        <button class="remove-item-btn">삭제</button>
+                                    </div>
+                                </div>
+                                <button class="buy-item-btn" disabled>일시품절</button>
+                            </div>
                         </li>
-                        <li class="tot-price-info">
-                            <span>총 주문금액</span>
-                            <span>100,000원</span>
+                        <li>
+                            <div>
+                                <input type="checkbox" id="cart-prd1">
+                            </div>
+                            <div class="right-area">
+                                <div>
+                                    <div class="thumb-wrap">
+                                        <img src="./img/sample/prd_01.webp" alt="">
+                                    </div>
+                                    <div class="info-area">
+                                        <div>
+                                            <p class="prd-title">듀플렉스 GF</p>
+                                            <p>
+                                                <span class="sale-price">159,000원</span>
+                                            </p>
+                                        </div>
+                                        <p class="prd-info">
+                                            <span class="color">BLACK</span>
+                                            <span class="size">230</span>
+                                        </p>
+                                    </div>
+                                    <div class="control-area">
+                                        <div class="cart-quantity-control">
+                                            <button class="decrease-btn" disabled></button>
+                                            <span class="count">0</span>
+                                            <button class="increase-btn"></button>
+                                        </div>
+                                        <button class="remove-item-btn">삭제</button>
+                                    </div>
+                                </div>
+                                <button class="buy-item-btn" disabled>일시품절</button>
+                            </div>
                         </li>
                     </ul>
-                    <button class="buy-btn">구매하기</button>
+                </div>
+                <div class="cart-rec-area">
+                    <div class="title-area">
+                        <p class="cart-rec-title">추천상품</p>
+                        <div class="btn-wrap">
+                            <button class="prev-btn"></button>
+                            <button class="next-btn"></button>
+                        </div>
+                    </div>
+                    <div class="cart-rec-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="thumb-img">
+                                    <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p class="prd-title">경량 4패널 러닝캡</p>
+                                    <p>
+                                        <span class="sale-price">49,000원</span>
+                                        <span class="raw-price">69,000원</span>
+                                    </p>
+
+                                    <button class="cart-rec-add-btn"></button>
+                                    <div class="cart-rec-add-overlay">
+                                        <div>
+                                            <select class="custom-select">
+                                                <option value="056" disabled>056 (품절)</option>
+                                                <option value="058">058</option>
+                                                <option value="105">105</option>
+                                                <option value="105">105</option>
+                                                <option value="105">105</option>
+                                                <option value="105">105</option>
+                                            </select>
+                                            <button class="rec-add-cart-btn">장바구니 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="thumb-img">
+                                    <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p class="prd-title">경량 4패널 러닝캡</p>
+                                    <p>
+                                        <span class="sale-price">49,000원</span>
+                                        <span class="raw-price">69,000원</span>
+                                    </p>
+
+                                    <button class="cart-rec-add-btn"></button>
+                                    <div class="cart-rec-add-overlay">
+                                        <div>
+                                            <select class="custom-select">
+                                                <option value="056" disabled>056 (품절)</option>
+                                                <option value="058">058</option>
+                                                <option value="105">105</option>
+                                                <option value="105">105</option>
+                                                <option value="105">105</option>
+                                                <option value="105">105</option>
+                                            </select>
+                                            <button class="rec-add-cart-btn">장바구니 추가</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="thumb-img">
+                                    <img src="./img/sample/cart_rec_prd.jpg" alt="">
+                                </div>
+                                <div>
+                                    <p class="prd-title">경량 4패널 러닝캡</p>
+                                    <p class="status-txt">일시품절</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="foot-area">
+                <ul class="cart-result-list">
+                    <li>
+                        <span>배송비</span>
+                        <span>무료</span>
+                    </li>
+                    <li>
+                        <span>상품 금액</span>
+                        <span>N/A</span>
+                    </li>
+                    <li class="tot-price-info">
+                        <span>총 주문금액</span>
+                        <span>100,000원</span>
+                    </li>
+                </ul>
+                <button class="buy-btn">구매하기</button>
+            </div>
         </div>
-    </div>
-    <script defer src="./lib/img-comparison/img-comparison-slider.js"></script>
+        <footer
+            style="top:0;left:0;width:100%;height:300px;background-color: red;z-index:1000;color: white;display: flex;align-items: center;justify-content: center;">
+            푸터 영역
+        </footer>
+    </main>
     <script src="./lib/gsap/gsap.min.js"></script>
-    <script src="./lib/gsap/ScrollTrigger.min.js"></script>
     <script>
-        // GSAP ScrollTrigger 플러그인 등록
-        if (window.gsap && window.ScrollTrigger) {
-            gsap.registerPlugin(ScrollTrigger);
-        }
-    </script>
-    <script>
-        function initCartPopup() {
-            new Swiper('#cart-popup .cart-rec-swiper', {
+        function initCartPage() {
+            new Swiper('#cart-page .cart-rec-swiper', {
                 loop: true,
                 slidesPerView: 1.2,
                 spaceBetween: 8,
@@ -278,7 +269,7 @@
                 },
             });
 
-            $('#cart-popup .cart-rec-add-btn').click(function () {
+            $('#cart-page .cart-rec-add-btn').click(function () {
                 $overlay = $(this).closest('.swiper-slide').find('.cart-rec-add-overlay');
                 $overlay.addClass('show');
                 gsap.set($overlay, { opacity: 0, 'overflow': 'hidden' });
@@ -316,7 +307,7 @@
             }
 
             // 모든 .custom-select에 대해 초기 색상 설정 및 change 이벤트 리스너 추가
-            $('.prd-detail-page .custom-select').each(function () {
+            $('#cart-popup .custom-select').each(function () {
                 var $select = $(this);
 
                 // 초기 색상 설정
@@ -363,107 +354,7 @@
                 });
             });
         }
-
-        const CART_POPUP = {
-            popupStack: [],
-
-            init: function () {
-                const t = this;
-
-                $('.popup-show-btn').click(function () {
-                    const targetId = $(this).data('popup');
-                    t.show(targetId);
-                });
-
-                $('.cart-popup-wrap .popup .close-btn').click(function () {
-                    const popupId = $(this).closest('.popup').attr('id');
-                    t.hide(popupId);
-                });
-
-                $('.cart-popup-wrap .popup-dim').click(function (event) {
-                    if (t.popupStack.length === 0) {
-                        return
-                    }
-
-                    const lastPopupId = t.popupStack.pop();
-                    t.hide(lastPopupId);
-                });
-            },
-
-            show: function (popupId) {
-                const $popup = $('#' + popupId);
-                if ($popup.length === 0 || $popup.closest('.cart-popup-wrap').length === 0) {
-                    return;
-                }
-
-                if (!this.popupStack.includes(popupId)) {
-                    this.popupStack.push(popupId);
-                }
-
-                // 배경 딤 show (gsap fade in)
-                $('.cart-popup-wrap .popup-dim').css('display', 'block'); // 보이게 하고
-                $('html,body').css('overflow', 'hidden');
-
-
-                if ($popup.hasClass('right-popup')) {
-
-                    gsap.set($popup, { opacity: 1, display: 'block', x: '100%' });
-
-                    gsap.to($popup, {
-                        duration: 0.3,
-                        x: '0',
-                        ease: "power2.out"
-                    });
-                }
-                else {
-
-                    gsap.set($popup, { opacity: 1, display: 'block', y: '100%' });
-
-                    gsap.to($popup, {
-                        duration: 0.3,
-                        y: '0',
-                        ease: "power2.out"
-                    });
-                }
-
-                gsap.to('.cart-popup-wrap .popup-dim', {
-                    duration: 0.3, backgroundColor: 'rgba(0,0,0,0)', ease: "power2.out", onComplete: function () {
-                        gsap.to('.cart-popup-wrap .popup-dim').css('display', 'block');
-                    }
-                });
-            },
-
-            hide: function (popupId) {
-                const $popup = $('#' + popupId);
-
-                gsap.to($popup, {
-                    duration: 0.3,
-                    y: '100%',
-                    ease: "power2.in",
-                    onComplete: function () {
-                        //$popup.css({ display: 'none' });
-                    }
-                });
-
-                this.popupStack = this.popupStack.filter(id => id !== popupId);
-                if (this.popupStack.length === 0) {
-                    $('html,body').css('overflow', 'auto');
-                    // 배경 딤 fade out
-                    gsap.to('.cart-popup-wrap .popup-dim', {
-                        duration: 0.3,
-                        backgroundColor: 'rgba(0,0,0,0)',
-                        ease: "power2.in",
-                        onComplete: function () {
-                            $('.popup-dim').css('display', 'none');
-                        }
-                    });
-                }
-            }
-        };
-
-        initCartPopup();
-        CART_POPUP.init();
-        CART_POPUP.show('cart-popup');
+        initCartPage();
     </script>
 </body>
 
