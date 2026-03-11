@@ -619,9 +619,43 @@ function jfTopBBClose(){
 	header {
 	    transition: all .2s ease-in-out;
 	}
+
+	.ps-inner {
+		overflow: visible;
+	}
+
+	header .sub-menus-area {
+		height: 100%;
+	}
+
+	header.show-sub-menus .gnb-area {
+		padding-bottom: 0 !important;
+	}
+
+	header.show-sub-menus {
+		position: fixed;
+		bottom: 0;
+	}
+
+	.up:not(.top) .ps-tab--wrap-sticky {
+  		transform: none !important;
+	}
+
+	#wrap.sub.ps-new,
+	#psWrap.sub.ps-new {
+		padding-top: 0 !important;
+	}
+
+	#wrap.sub, #psWrap.sub {
+		padding-top: 0 !important;
+	}
+
+	.ps-new .ps-tab--wrap.type1 {
+		padding-top: 0 !important;
+	}
 </style>
 <!-- Header -->
-<header style="top: -2px; transition: top 0.25s cubic-bezier(0.4, 0, 0.2, 1);">
+<header>
 <!-- 탑배너 -->
 
 	<div class="swiper top-txt-banner swiper-initialized swiper-vertical swiper-backface-hidden">
@@ -2167,150 +2201,159 @@ function jfTopBBClose(){
 	
 // @@@@@@
 function initLayout() {
-  const header = document.querySelector('header');
-  const headerTopTxtBanner = header.querySelector('.top-txt-banner');
-  const psWrap = document.querySelector('#psWrap');
+	const header = document.querySelector('header');
+	const headerTopTxtBanner = header.querySelector('.top-txt-banner');
+	const psWrap = document.querySelector('#psWrap');
 
-  if (psWrap.classList.contains('black') || !psWrap.classList.contains('sub')) {
-      header.classList.add('transparent');
-      window.addEventListener('scroll', function () {
-          if (window.scrollY < 30) {
-              header.classList.add('transparent');
-          } else {
-              header.classList.remove('transparent');
-          }
-      });
-  }
+	if (psWrap.classList.contains('black') || !psWrap.classList.contains('sub')) {
+		header.classList.add('transparent');
+		window.addEventListener('scroll', function () {
+			if (window.scrollY < 30) {
+				header.classList.add('transparent');
+			} else {
+				header.classList.remove('transparent');
+			}
+		});
+	}
 
-  if (headerTopTxtBanner) {
-      headerTopTxtBanner.querySelector('.close-btn').addEventListener('click', function () {
-          document.querySelector('.top-txt-banner').classList.toggle('hide');
-          //updatePsWrapPadding();
-      })
-  }
-  //updatePsWrapPadding();
+	if (headerTopTxtBanner) {
+		headerTopTxtBanner.querySelector('.close-btn').addEventListener('click', function () {
+			document.querySelector('.top-txt-banner').classList.toggle('hide');
+			//updatePsWrapPadding();
+		})
+	}
+	//updatePsWrapPadding();
 
-  // 텍스트 넓이 틀어짐 조정
-  // 메뉴 아이템의 실제 넓이에 맞춰 스타일을 적용
-  const menuItems = document.querySelectorAll('header .menus > li');
-  menuItems.forEach(item => {
-      const width = item.offsetWidth;
-      item.style.width = width + 'px';
-  });
+	// 텍스트 넓이 틀어짐 조정
+	// 메뉴 아이템의 실제 넓이에 맞춰 스타일을 적용
+	const menuItems = document.querySelectorAll('header .menus > li');
+	menuItems.forEach(item => {
+		const width = item.offsetWidth;
+		item.style.width = width + 'px';
+	});
 
-  // 스크롤시 헤더 숨기기
-  const $header = $('header');
-  let prevScroll = window.scrollY;
-  let currentHeaderTop = 0;
-  let ticking = false;
+	// 스크롤시 헤더 숨기기
+	const $header = $('header');
+	let prevScroll = window.scrollY;
+	let currentHeaderTop = 0;
+	let ticking = false;
 
-  function onScroll() {
-      if (!ticking) {
-          window.requestAnimationFrame(() => {
-              const scrollTop = Math.max(0, window.scrollY);
-              const scrollDelta = scrollTop - prevScroll;
-              const headerHeight = header.offsetHeight;
-              // 스크롤 방향에 따라 top 값 계산 (Sticky/Fixed 기준)
-              currentHeaderTop = Math.max(-headerHeight, Math.min(0, currentHeaderTop - scrollDelta));
-              const headerCss = { 'top': currentHeaderTop + 'px', 'transition': 'top 0.25s cubic-bezier(0.4,0,0.2,1)' };
-              $header.css(headerCss);
-              // 메뉴도 따라가게 수정
-              const $subGnb = $('.ps-tab--wrap-sticky');
-              if ($subGnb.length) {
-                  $subGnb.css({ 'top': (currentHeaderTop + headerHeight) + 'px', 'transition': 'top 0.25s cubic-bezier(0.4,0,0.2,1)' });
-              }
-              prevScroll = scrollTop;
+	function onScroll() {
+		if (!ticking) {
+			window.requestAnimationFrame(() => {
+				const scrollTop = Math.max(0, window.scrollY);
+				const scrollDelta = scrollTop - prevScroll;
+				const headerHeight = $header.outerHeight();
+				// 스크롤 방향에 따라 top 값 계산 (Sticky/Fixed 기준)
+				currentHeaderTop = Math.max(-headerHeight, Math.min(0, currentHeaderTop - scrollDelta));
+				const headerCss = { 'top': currentHeaderTop + 'px', 'transition': 'top 0.25s cubic-bezier(0.4,0,0.2,1)' };
+				$header.css(headerCss);
+				// 메뉴도 따라가게 수정
+				const $subGnb = $('.ps-tab--wrap-sticky');
+				if ($subGnb.length) {
+					$subGnb.css({ 'top': (currentHeaderTop + headerHeight) + 'px', 'transition': 'top 0.25s cubic-bezier(0.4,0,0.2,1)' });
+				}
+				prevScroll = scrollTop;
 
-              ticking = false;
-          });
-          ticking = true;
-      }
-  }
+				ticking = false;
+			});
+			ticking = true;
+		}
+	}
 
-  window.addEventListener('scroll', onScroll);
+	window.addEventListener('scroll', onScroll);
 
-  var $gnbButtons = $('.gnb-left-area .gnb-left-area-btn');
-  var $subMenusArea = $('.sub-menus-area');
-  var $subMenus = $subMenusArea.find('.sub-menus');
-  var $html = $('html');
-  // 높이값 계산 및 설정 함수
-  function setSubMenusPosition() {
-      var topBannerHeight = 0;
-      var $topBanner = $('.top-txt-banner');
+	var $gnbButtons = $('.gnb-left-area .gnb-left-area-btn');
+	var $subMenusArea = $('.sub-menus-area');
+	var $subMenus = $subMenusArea.find('.sub-menus');
+	var $html = $('html');
+	// 높이값 계산 및 설정 함수
+	function setSubMenusPosition() {
+		// var topBannerHeight = 0;
+		// var $topBanner = $('.top-txt-banner');
 
-      // top-txt-banner가 있을 경우 높이값 가져오기
-      if ($topBanner.length) {
-          topBannerHeight = $topBanner.outerHeight();
-      }
+		// // top-txt-banner가 있을 경우 높이값 가져오기
+		// if ($topBanner.length) {
+		// 	topBannerHeight = $topBanner.outerHeight();
+		// }
 
-      // gnb-area 높이값 가져오기
-      var gnbAreaHeight = $('.gnb-area').outerHeight();
+		// // gnb-area 높이값 가져오기
+		// var gnbAreaHeight = $('.gnb-area').outerHeight();
 
-      // 스크롤값이 0보다 큰 경우 gnb-area 높이값만 사용
-      var scrollTop = $(window).scrollTop();
-      var heightValue;
+		// // 스크롤값이 0보다 큰 경우 gnb-area 높이값만 사용
+		// var scrollTop = $(window).scrollTop();
+		// var heightValue;
 
-      if (scrollTop > 0) {
-          heightValue = 'calc(100vh - ' + gnbAreaHeight + 'px)';
-      } else {
-          // 합친 높이값으로 height 설정
-          var totalHeight = topBannerHeight + gnbAreaHeight;
-          heightValue = 'calc(100vh - ' + totalHeight + 'px)';
-      }
+		// if (scrollTop > 0) {
+		// 	heightValue = 'calc(100vh - ' + gnbAreaHeight + 'px)';
+		// } else {
+		// 	// 합친 높이값으로 height 설정
+		// 	var totalHeight = topBannerHeight + gnbAreaHeight;
+		// 	heightValue = 'calc(100vh - ' + totalHeight + 'px)';
+		// }
 
-      $subMenusArea.css({
-          'height': heightValue
-      });
-  }
+		// $subMenusArea.css({
+		// 	'height': heightValue
+		// });
+	}
 
-  // 모든 서브메뉴 숨기기 함수
-  function hideAllSubMenus() {
-      $subMenusArea.hide();
-      $subMenus.hide();
-      $html.removeAttr('style');
-  }
+	// 모든 서브메뉴 숨기기 함수
+	function hideAllSubMenus() {
+		$subMenusArea.hide();
+		$subMenus.hide();
+		$html.removeAttr('style');
+	}
 
-  // gnb-left-area의 button에 hover되면 동일한 index의 sub-menus와 sub-menus-area에 show() 처리 및 active 클래스 부여
-  $gnbButtons.on('mouseenter', function () {
-      var index = $(this).index();
+	// gnb-left-area의 button에 hover되면 동일한 index의 sub-menus와 sub-menus-area에 show() 처리 및 active 클래스 부여
+	$gnbButtons.on('mouseenter', function () {
+		var index = $(this).index();
+		updatePsWrapPadding()
 
-      setSubMenusPosition();
-      $gnbButtons.removeClass('active');
-      $(this).addClass('active');
-      $subMenus.hide();
-      $subMenusArea.show();
-      $subMenus.eq(index).css('display', 'flex');
-      $html.css('overflow', 'hidden');
-      $('header').removeClass('transparent');
-  });
+		$('header').addClass('show-sub-menus')
 
-  //sub-menus에서 마우스가 벗어나면 hide 및 active 클래스 제거
-  $subMenusArea.on('mouseleave', function () {
-      $gnbButtons.removeClass('active');
-      hideAllSubMenus();
-  });
+		setSubMenusPosition();
+		$gnbButtons.removeClass('active');
+		$(this).addClass('active');
+		$subMenus.hide();
+		$subMenusArea.show();
+		$subMenus.eq(index).css('display', 'flex');
+		$html.css('overflow', 'hidden');
+		$('header').removeClass('transparent');
+	});
 
-  // sub-menus-blurDim에 마우스 진입 시 hide 및 active 클래스 제거
-  $('.sub-menus-blurDim').on('mouseenter', function () {
-      $gnbButtons.removeClass('active');
-      hideAllSubMenus();
-  });
+	//sub-menus에서 마우스가 벗어나면 hide 및 active 클래스 제거
+	$subMenusArea.on('mouseleave', function () {
+		$('header').removeClass('show-sub-menus');
+		$('#wrap.sub.ps-new, #psWrap.sub.ps-new').css('paddingTop', 0);
 
-  // input-toggle-btn 클릭 시 search-area 토글 및 검색 처리
-  $('.input-toggle-btn').on('click', function () {
-      var $searchArea = $('.search-area');
-      var $searchInput = $('.search-input');
-      var inputValue = $searchInput.val();
-      $searchInput.focus();
-      // 입력값이 있으면 검색 실행, 없으면 토글 처리
-      if (inputValue && inputValue.trim() !== '') {
-          // 검색 실행 (form submit 또는 검색 함수 호출)
-		jfSearchProductByGnb(document.gnbSearchForm.qt.value);
-      } else {
-          // 토글 처리
-          $searchArea.toggleClass('active');
-      }
-  });
+		$gnbButtons.removeClass('active');
+		hideAllSubMenus();
+	});
+
+	// sub-menus-blurDim에 마우스 진입 시 hide 및 active 클래스 제거
+	$('.sub-menus-blurDim').on('mouseenter', function () {
+		$('header').removeClass('show-sub-menus');
+		$('#wrap.sub.ps-new, #psWrap.sub.ps-new').css('paddingTop', 0);
+
+		$gnbButtons.removeClass('active');
+		hideAllSubMenus();
+	});
+
+	// input-toggle-btn 클릭 시 search-area 토글 및 검색 처리
+	$('.input-toggle-btn').on('click', function () {
+		var $searchArea = $('.search-area');
+		var $searchInput = $('.search-input');
+		var inputValue = $searchInput.val();
+		$searchInput.focus();
+		// 입력값이 있으면 검색 실행, 없으면 토글 처리
+		if (inputValue && inputValue.trim() !== '') {
+			// 검색 실행 (form submit 또는 검색 함수 호출)
+			jfSearchProductByGnb(document.gnbSearchForm.qt.value);
+		} else {
+			// 토글 처리
+			$searchArea.toggleClass('active');
+		}
+	});
 }
 
 // @@
