@@ -1,84 +1,113 @@
 <html>
 
 <head>
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/mo.css">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/mo.css">
+	<style>
+		@font-face {
+			font-family: 'General Sans';
+			src: url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/fonts/GeneralSans/GeneralSans-Medium.woff2') format('woff2'),
+				url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/fonts/GeneralSans/GeneralSans-Medium.woff') format('woff'),
+				url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/fonts/GeneralSans/GeneralSans-Medium.ttf') format('truetype');
+			font-weight: 500;
+			font-display: swap;
+			font-style: normal;
+		}
+
+
+		@font-face {
+			font-family: 'General Sans';
+			src: url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/fonts/GeneralSans/GeneralSans-Semibold.woff2') format('woff2'),
+				url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/fonts/GeneralSans/GeneralSans-Semibold.woff') format('woff'),
+				url('https://nw-nmall-prd-img.s3.ap-northeast-2.amazonaws.com/front/ux/fonts/GeneralSans/GeneralSans-Semibold.ttf') format('truetype');
+			font-weight: 600;
+			font-display: swap;
+			font-style: normal;
+		}
+	</style>
 </head>
 
 <body style="padding-top:100px;">
-    <div class="main-page">
-        <div class="sec2" style="padding: 0 1.25rem;">
-            <div class="prd-swiper">
-                <ul class="prd-list">
-							<li class="prd-item">
-								<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_0','PS_MA_001','','ur');">
-									<div class="thumb-wrap">
-										<img id="styleProd_0" src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize" alt="PT3FS22M071">
-                                        <span class="badge">NEW</span>
-                                        <button class="toggle-wish-btn"></button>
-									</div>
+	<div class="main-page">
+		<div class="sec2" style="padding: 0 1.25rem;">
+			<div class="prd-swiper">
+				<ul class="prd-list">
+					<li class="prd-item">
+						<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_0','PS_MA_001','','ur');">
+							<div class="thumb-wrap">
+								<img id="styleProd_0"
+									src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize"
+									alt="PT3FS22M071">
+								<span class="badge">NEW</span>
+								<button class="toggle-wish-btn"></button>
+							</div>
+							<p class="prd-name">2022 FC서울 스트라이프 V넥 (BLACK)</p>
+							<p class="price-info">
+								<span class="sale-price">79,000원</span>
+							</p>
+						</a>
+					</li>
+					<li class="prd-item">
+						<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_1','PS_MA_001','','ur');">
+							<div class="thumb-wrap">
+								<img id="styleProd_0"
+									src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize"
+									alt="PT3FS22M071">
+								<span class="badge">UNISEX</span>
+								<button class="toggle-wish-btn on"></button>
+							</div>
 
-								<p class="prd-name">2022 FC서울 스트라이프 V넥 (BLACK)</p>
-								<p class="price-info">
-									<span class="sale-price">79,000원</span>
-								</p>
-							</a>
-						</li>
-							<li class="prd-item">
-								<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_1','PS_MA_001','','ur');">
-									<div class="thumb-wrap">
-										<img id="styleProd_0" src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize" alt="PT3FS22M071">
-							            <span class="badge">UNISEX</span>
-                                        <button class="toggle-wish-btn on"></button>	
-									</div>
+							<p class="prd-name">2022 FC서울 어센틱 트레이닝 상의</p>
+							<p class="price-info">
 
-								<p class="prd-name">2022 FC서울 어센틱 트레이닝 상의</p>
-								<p class="price-info">
-							
-									<span class="sale-price">99,000원</span>
-							
-								</p>
-							</a>
-						</li>
-			
-							<li class="prd-item">
-								<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_2','PS_MA_001','','ur');">
-									<div class="thumb-wrap">
-										<img id="styleProd_2" src="https://timg.prospecs.com/prod/PT3FS22/PT3FS22M152/PT3FS22M152_01.jpg/dims/resizef/1080x1080/optimize" alt="PT3FS22M152">
-								
-									</div>
+								<span class="sale-price">99,000원</span>
 
-								<p class="prd-name">2022 FC서울 어센틱 바람막이 피스테</p>
-								<p class="price-info">
-							
-									<span class="sale-price">129,000원</span>
-							
-								</p>
-							</a>
-						</li>
-			
-							<li class="prd-item">
-								<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_3','PS_MA_001','','ur');">
-									<div class="thumb-wrap">
-										<img id="styleProd_3" src="https://timg.prospecs.com/prod/PT3FS22/PT3FS22M072/PT3FS22M072_01.jpg/dims/resizef/1080x1080/optimize" alt="PT3FS22M072">
-								
-									</div>
+							</p>
+						</a>
+					</li>
 
-								<p class="prd-name">2022 FC서울 스트라이프 V넥 (WHITE)</p>
-								<p class="price-info">
-							
-									<span class="sale-price">79,000원</span>
-							
-								</p>
-							</a>
-						</li>
-			
-					</ul>
-            </div>
-        </div>
-    </div>
+					<li class="prd-item">
+						<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_2','PS_MA_001','','ur');">
+							<div class="thumb-wrap">
+								<img id="styleProd_2"
+									src="https://timg.prospecs.com/prod/PT3FS22/PT3FS22M152/PT3FS22M152_01.jpg/dims/resizef/1080x1080/optimize"
+									alt="PT3FS22M152">
+
+							</div>
+
+							<p class="prd-name">2022 FC서울 어센틱 바람막이 피스테</p>
+							<p class="price-info">
+
+								<span class="sale-price">129,000원</span>
+
+							</p>
+						</a>
+					</li>
+
+					<li class="prd-item">
+						<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_3','PS_MA_001','','ur');">
+							<div class="thumb-wrap">
+								<img id="styleProd_3"
+									src="https://timg.prospecs.com/prod/PT3FS22/PT3FS22M072/PT3FS22M072_01.jpg/dims/resizef/1080x1080/optimize"
+									alt="PT3FS22M072">
+
+							</div>
+
+							<p class="prd-name">2022 FC서울 스트라이프 V넥 (WHITE)</p>
+							<p class="price-info">
+
+								<span class="sale-price">79,000원</span>
+
+							</p>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
 	<script>
 		/* 샘플 스크립트 */
 		const wishBtns = document.querySelectorAll('.toggle-wish-btn');
