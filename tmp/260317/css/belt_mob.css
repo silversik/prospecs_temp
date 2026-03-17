@@ -1,0 +1,41 @@
+
+
+/* 카운트 띠배너 
+.ps-middle-banner{margin-bottom:90px;margin-top:20px;}
+.ps-middle-banner .banner-wrp{width:100%;height:44px;position:relative;background:#23ceff;transition:all 0.1s}
+.ps-middle-banner .banner-wrp .rolling-banner{position:absolute;top:0;width:200%;height:44px;display:flex;align-items:center;justify-content:center;}
+.ps-middle-banner .banner-wrp p{width:48%;height:44px;font-size:13px;display:flex;align-items:center;background:#23ceff;}
+.ps-middle-banner .banner-wrp p img {max-width:88px; width: 100%; height:44px; !importent}
+.ps-middle-banner .banner-wrp .dDay{font-size:18px;display:inline-block;margin-left:8px;color:rgb(255,50,20);position:relative;top:-1px}
+*/
+
+/*흐르는 띠배너 */
+
+@keyframes marquee {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.newbag-foot {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 160px;
+    margin-top: 60px;
+}
+
+.newbag-foot .repeatTxt {
+    width: 2000%;
+    height: 120px;
+    background: url(https://image.prospecs.com/front/images/planning/8512/241029_kkomk.png) repeat-x;
+    background-size: auto 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    will-change: transform;
+    animation: marquee 100s linear infinite;
+}
