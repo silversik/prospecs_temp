@@ -2054,6 +2054,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 .ps-new .ps-prd-list--wrap .ps-prd-item {
     margin-bottom: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .ps-new .ps-prd-list--wrap {
@@ -2061,6 +2062,44 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px 8px; 
 }
+
+.ps-new .ps-prd-list--wrap .thumbs {
+    position: relative;
+}
+
+.ps-new .ps-prd-list--wrap .thumbs .badge {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.1875rem;
+    background: #FFF;
+    color: #1D1D1D;
+    font-feature-settings: 'case' on;
+    font-family: "General Sans";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.00625rem;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+.ps-new .ps-prd-list--wrap .thumbs .toggle-wish-btn {
+    top: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(../img/ico_wishlist.svg) center no-repeat;
+    outline: none;
+}
+
+.ps-new .ps-prd-list--wrap .thumbs .toggle-wish-btn.on {
+    background: url(../img/ico_wishlist_on.svg) center no-repeat;
+}
+
 .ps-new .ps-prd-list--util {
     border: 1px solid#eee;
 }

@@ -15,24 +15,23 @@
 							<li class="prd-item">
 								<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_0','PS_MA_001','','ur');">
 									<div class="thumb-wrap">
-										<img id="styleProd_0" src="https://timg.prospecs.com/prod/PT3FS22/PT3FS22M071/PT3FS22M071_01.jpg/dims/resizef/1080x1080/optimize" alt="PT3FS22M071">
-								
+										<img id="styleProd_0" src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize" alt="PT3FS22M071">
+                                        <span class="badge">NEW</span>
+                                        <button class="toggle-wish-btn"></button>
 									</div>
 
 								<p class="prd-name">2022 FC서울 스트라이프 V넥 (BLACK)</p>
 								<p class="price-info">
-							
 									<span class="sale-price">79,000원</span>
-							
 								</p>
 							</a>
 						</li>
-			
 							<li class="prd-item">
 								<a href="javascript:void('0');" onclick="jfStyleProdChange('styleProd_1','PS_MA_001','','ur');">
 									<div class="thumb-wrap">
-										<img id="styleProd_1" src="https://timg.prospecs.com/prod/PT3FS22/PT3FS22M051/PT3FS22M051_01.jpg/dims/resizef/1080x1080/optimize" alt="PT3FS22M051">
-								
+										<img id="styleProd_0" src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize" alt="PT3FS22M071">
+							            <span class="badge">UNISEX</span>
+                                        <button class="toggle-wish-btn on"></button>	
 									</div>
 
 								<p class="prd-name">2022 FC서울 어센틱 트레이닝 상의</p>
@@ -80,6 +79,18 @@
             </div>
         </div>
     </div>
+	<script>
+		/* 샘플 스크립트 */
+		const wishBtns = document.querySelectorAll('.toggle-wish-btn');
+		wishBtns.forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				e.preventDefault();
+				e.stopPropagation();
+
+				btn.classList.toggle('on');
+			});
+		});
+	</script>
 </body>
 
 </html>

@@ -21,6 +21,8 @@
                             src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S201/PW0UL26S201_01.jpg/dims/resizef/530x530/optimize"
                             onerror="this.src='https://timg.prospecs.com/prod/error/noimg.jpg/dims/resizef/530x530/optimize'"
                             alt="PW0UL26S201">
+                            <span class="badge">NEW</span>
+                            <button class="toggle-wish-btn"></button>
                     </div>
                     <div class="desc">
                         <p class="name line-clamp-2">에센셜 슬라이드</p>
@@ -42,6 +44,8 @@
                             src="https://timg.prospecs.com/prod/PW0UL26/PW0UL26S202/PW0UL26S202_01.jpg/dims/resizef/530x530/optimize"
                             onerror="this.src='https://timg.prospecs.com/prod/error/noimg.jpg/dims/resizef/530x530/optimize'"
                             alt="PW0UL26S202">
+                            <span class="badge">UNISEX</span>
+                            <button class="toggle-wish-btn on"></button>
                     </div>
                     <div class="desc">
                         <p class="name line-clamp-2">에센셜 슬라이드</p>
@@ -78,6 +82,18 @@
     </main>
 
     </div>
+    <script>
+		/* 샘플 스크립트 */
+		const wishBtns = document.querySelectorAll('.toggle-wish-btn');
+		wishBtns.forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				e.preventDefault();
+				e.stopPropagation();
+
+				btn.classList.toggle('on');
+			});
+		});
+	</script>
 </body>
 
 </html>
