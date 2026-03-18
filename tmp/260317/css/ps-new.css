@@ -2084,6 +2084,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
     letter-spacing: -0.00625rem;
     text-transform: uppercase;
     background-color: white;
+    z-index: 9;
 }
 
 .ps-new .ps-prd-list--wrap .thumbs .toggle-wish-btn {
@@ -2094,6 +2095,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
     height: 2rem;
     background: url(../img/ico_wishlist.svg) center no-repeat;
     outline: none;
+    z-index: 9;
 }
 
 .ps-new .ps-prd-list--wrap .thumbs .toggle-wish-btn.on {

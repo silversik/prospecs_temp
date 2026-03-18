@@ -3194,7 +3194,7 @@ body {
 
 .ps-inner>div:not(.ps-detail-content)
 {
-  padding: 0 1.25rem;!important;
+  padding: 0 1.25rem !important;
 }
 
 /*수정 230307*/
@@ -3317,85 +3317,10 @@ body {
   height: auto;
 }
 
-.ps-prd-item .thumbs .badge {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.ps-prd-item .thumbs .badge .sex {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: #fff;
-  overflow: hidden;
-  float: left;
-}
-
-.ps-prd-item .thumbs .badge .sex > span {
-  display: block;
-  float: left;
-  width: 1.125rem;
-  height: 1.125rem;
-  line-height: 1.25rem;
-  font-size: 0.6875rem;
-  text-align: center;
-  background-color: #1d1d1d;
-}
-
-.ps-prd-item .thumbs .badge .sex > span.male {
-  background-color: #1d1d1d;
-}
-
-.ps-prd-item .thumbs .badge .sex > span.female {
-  background-color: #FA0A00;
-}
-
-.ps-prd-item .thumbs .badge .rank {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fff;
-  overflow: hidden;
-  float: left;
-  background-color: #1d1d1d;
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: #1d1d1d;
-}
-
-.ps-prd-item .thumbs .badge.best {
-  display: block;
-  top: 0;
-  bottom: auto;
-  width: 3.75rem;
-  height: 1.5rem;
-  border: 0.125rem solid #1d1d1d;
-  color: #1d1d1d;
-  font-size: 0.75rem;
-  font-weight:700;
-  line-height: 1.25rem;
-  text-align: center;
-}
-
-.ps-prd-item .thumbs .badge.best.bk {
-  background: #1d1d1d;
-  color: #fff;
-}
-
 /*춘천마라톤*/
 .ps-prd-item .thumbs .ccmarathon {
   display: block;
-  width: 100%
+  width: 100%;
   text-align: center;
   position: absolute;
   bottom: 0;
